@@ -11,6 +11,8 @@ Zawiera glowna klase: LastFmUser.
 """
 
 import urllib
+import band
+import json
 from BeautifulSoup import *
 
 # glowna klasa
@@ -26,6 +28,7 @@ class LastFmUser:
         self._nrOfPages = self.get_info() # klucze: 'scrobbles', 'artists'
         self.artists = []
         self.scrobbles = []
+        self.concertList = []
     
     
     def __str__(self):
@@ -55,10 +58,11 @@ class LastFmUser:
     
     def clean(self):
         '''
-        Przywraca wartosci poczatkowe dla self.artists oraz self.scrobbles
+        Przywraca wartosci poczatkowe dla self.artists, self.scrobbles, self.concertList
         '''
         self.artists = []
         self.scrobbles = []
+        self.concertList = []
     
     
     
@@ -77,9 +81,8 @@ class LastFmUser:
         # ekstrakcja playlisty
         przesluchane = []
         for link in linki:
-            print u'Przetwazanie strony: {}'.format(link)
             przesluchane += self.looking4music(link)
-            print 'ok'
+            print u'Przetwazanie strony: {} - OK'.format(link)
         self.scrobbles = przesluchane
     
     
@@ -99,12 +102,48 @@ class LastFmUser:
         # ekstrakcja playlisty
         wykonawcy = []
         for link in linki:
-            print u'Przetwazanie strony: {}'.format(link)
             wykonawcy += self.looking4artist(link)
-            print 'ok'
+            print u'Przetwazanie strony: {} - OK'.format(link)
         self.artists = wykonawcy
+    
+    
+    
+    def get_concertList(self):
+        '''
+        Dla ulubionych artystow pobiera informacje o koncertach.
+        Jesli brak artystow - nie robi nic.
+        '''
+        # jesli brak artystow
+        if self.artists == []:
+            print 'Brak artystow'
+            return None
+            
+        # pobiera liste koncertow - iteruje po wykonawcach
+        concerts = []
+        for row in self.artists:
+            band_name = row[0]
+            band_object = band.BandFm(band_name)
+            band_object.get_events()
+            if len(band_object.events) > 0:
+                for element in band_object.events:
+                    concerts.append(element)
+        
+        self.concertList = concerts
         
     
+    def to_json(self):
+        '''
+        Zrzuca scroble, artystow oraz koncerty do jsona.
+        '''
+        # przesluchane utwory
+        with open('json/scrobbles.json', 'w') as outfile:
+            json.dump(self.scrobbles, outfile)
+        # ulubieni wykonawcy
+        with open('json/artists.json', 'w') as outfile:
+            json.dump(self.artists, outfile)
+        # koncerty
+        with open('json/events.json', 'w') as outfile:
+            json.dump(self.concertList, outfile)
     
     # pobieranie danych dotyczacych scrobbli
     def looking4music(self, url):
@@ -118,7 +157,7 @@ class LastFmUser:
         songs = soup.findAll("td", {"class" : "chartlist-name"}) # zawiera zesplol oraz utwor
         dates = soup.findAll("td", {"class" : "chartlist-timestamp"}) # zawiera daty
         
-        print len(songs), len(dates)
+        #print len(songs), len(dates)
         
         playlista = [] # na gotowe kawalki
         
@@ -196,9 +235,3 @@ class LastFmUser:
         pages = tag.string.lstrip().split()[-1]
         
         return pages
-        
-        
-
-
-# WYWOLANIA
-user= LastFmUser('Biegan')

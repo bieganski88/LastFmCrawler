@@ -170,9 +170,3 @@ class BandFm:
         
         return list_lineup
     
-    
-
-#del x
-band = BandFm("Sum+41")
-band.get_events()
-x = band.events
