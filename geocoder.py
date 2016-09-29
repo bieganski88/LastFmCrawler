@@ -8,9 +8,10 @@ Created on Tue Aug 02 23:18:28 2016
 import sqlite3
 import os
 import json
+import urllib2
 
 # constans
-APIKEY = "" # klucz google maps api
+APIKEY = "AIzaSyCABuxZRUVIDB7LtQeaoL8fcIuMCXHGlIM" # klucz google maps api
 SRCFILE = "./json/events.json" # sciezka do pliku zrodlowego
 DESTPATH= "./sqlite" # sciezka do zapisu plikow wynikowych
 
@@ -26,10 +27,13 @@ class Geocoder:
         self._apikey = APIKEY
         self._srcfile = SRCFILE
         self._destpath = DESTPATH
+        self._data = []
+        self.results = []
         self._valid = False
         if self.validate() is True:
             print "\nInicjalizacja zakonczona powodzeniem."
             self._valid = True
+            self._data = self.loadData()
     
     
     def validate(self):
@@ -72,7 +76,52 @@ class Geocoder:
         Wejscie dane zrodlowe pochodzace z JSON, wyjscie te same dane wzbogacone
         o wspolrzedne. Pomocniczo korzysta z LookupTable.db
         '''
-        return True
+        if self._valid is True:
+            # nawiazanie polaczenia z baza danych
+            connection = sqlite3.connect('LookupTable.db')
+            cur = connection.cursor()
+            
+            for event in self._data:
+                city, country = event[-2], event[-1] # city and country
+                print city, country
+                # zapytanie o to czy lokacja jest juz w bazie danych
+                query = u'select * from GEOLOKALIZACJE where city = "{}" and country = "{}"'.format(city, country)
+                rows = cur.execute(query.encode("UTF-8")).fetchall()
+                
+                if len(rows) > 0: # jest w bazie
+                    lat = rows[0][3]
+                    lng = rows[0][4]
+                    
+                else: # trzeba pozyskac dane od wujka Googla
+                    try:
+                        # tworze tresc zapytania do Google API
+                        url_base = u'https://maps.googleapis.com/maps/api/geocode/json?'
+                        url_location = u'address={}'.format((city+"+"+country).replace(' ', '+'))
+                        url = u'{}{}&key={}'.format(url_base, url_location, self._apikey)
+                        
+                        #zapytanie do  google api
+                        site = urllib2.urlopen(url.encode("UTF-8"))
+                        data = json.load(site)
+                        location = data['results'][0]['geometry']['location']
+                        lat, lng = location['lat'], location['lng']
+                        # insert do bazy danych
+                        query = u'INSERT INTO GEOLOKALIZACJE VALUES(NULL, "{}", "{}", {}, {})'.format(country, city, lat, lng)
+                        cur.execute(query.encode("UTF-8"))
+                    except:
+                        print "Cos poszlo nie tak dla >> {},{}".format(city, country)
+                
+                # tu juz czesc wspolna dla obu przypadkow
+                geoEvent = event[:] # kopia listy
+                geoEvent.append(lat)
+                geoEvent.append(lng)
+                
+                self.results.append(geoEvent) # dodaje do wynikow
+                
+            # zamykam polaczenie z baza
+            connection.commit()
+            connection.close()
+        else:
+            print "Obiekt nie przeszedl inicjalizacji prawidlowo. Nie mozna kontynuowac."
         
     
     # FUNKCJE POMOCNICZE - TWORZENIE BAZ DANYCH SQLITE
@@ -88,11 +137,11 @@ class Geocoder:
         # tworzenie tabeli
         conn.execute('''
             CREATE TABLE GEOLOKALIZACJE
-            (ID INT PRIMARY KEY NOT NULL,
+            (ID INTEGER PRIMARY KEY,
             COUNTRY CHAR(50) NOT NULL,
             CITY CHAR(50) NOT NULL,
-            LONGITUDE REAL NOT NULL,
-            LATITUDE REAL NOT NULL
+            LATITUDE REAL NOT NULL,
+            LONGITUDE REAL NOT NULL
             );''')
         print "Baza danych LookupTable.db utworzona pomyslnie."
         conn.close()
@@ -108,7 +157,7 @@ class Geocoder:
         # tworzenie tabeli
         conn.execute('''
             CREATE TABLE EVENTS
-            (ID INT PRIMARY KEY NOT NULL,
+            (ID INTEGER PRIMARY KEY,
             TITLE CHAR(50) NOT NULL,
             DATE CHAR(25) NOT NULL,
             LINEUP TEXT,
