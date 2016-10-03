@@ -7,12 +7,13 @@ Created on Tue Jul 26 07:35:55 2016
 import urllib
 from BeautifulSoup import *
 
+
 class BandFm:
     '''
     Pajaczek pobiera informacje o zespole, a dokladniej
     glowne tagi go opisujace oraz informacje o koncertach (data, miejsce, lineup).
     '''
-    
+
     def __init__(self, band_name):
         '''
         Band name musi byc z '+' zamiast spacji.
@@ -24,11 +25,11 @@ class BandFm:
         self._is_valid = self.validation()
         self.tags = []
         self.events = []
-        
+
         self.__str__()
         self.get_tags()
-    
-    
+
+
     def __str__(self):
         '''
         Zwraca informacje podstawowe o obiekcie.
@@ -37,8 +38,8 @@ class BandFm:
         print "Strona bazowa zespolu: {}".format(self._base_url)
         print "Czy strona odpowiada: {}".format(self._is_valid)
         print "Czy zespol obecnie jest w trasie: {}".format(self._on_tour)
-    
-    
+
+
     # metody w klasie
     def validation(self):
         '''
@@ -53,8 +54,8 @@ class BandFm:
             return True
         except:
             return False
-    
-    
+
+
     def is_on_tour(self, BeautifulSoupObject):
         '''
         Zwraca True jeśli zespol obecnie koncertuje,
@@ -64,7 +65,7 @@ class BandFm:
         koncert_info = BeautifulSoupObject.findAll("div", {"class" : '''
                 header-title-label-wrap
                 header-title-column-ellipsis-wrap
-            '''}) # musi zostac taki dziki zapis klasy
+            '''})  # musi zostac taki dziki zapis klasy
         tour = koncert_info[0].findAll("a", {"class" : "label"})
 
         if tour == []:
@@ -74,8 +75,8 @@ class BandFm:
                 return True
             else:
                 return False
-    
-    
+
+
     def get_events(self):
         '''
         Pobiera liste nadchodzacych koncertow.
@@ -83,17 +84,17 @@ class BandFm:
         if self._on_tour is False or self._is_valid is False:
             self.events = []
             return None
-        
+
         url = '{}/+events'.format(self._base_url)
         soup = self.makeSoup(url)
-        
+
         # wyszukuje sekcji z koncertami
         when = soup.findAll("td", {"class" : "events-list-item-art"})
         who = soup.findAll("td", {"class" : "events-list-item-event"})
         where = soup.findAll("td", {"class" : "events-list-item-venue"})
-        
+
         events = []
-        
+
         for index in range(len(when)):
             try:
                 event = []
@@ -110,15 +111,14 @@ class BandFm:
                 event.append(where[index].findAll("div", {"class" : "events-list-item-venue--city"})[0].text)
                 # kraj
                 event.append(where[index].findAll("div", {"class" : "events-list-item-venue--country"})[0].text)
-                
+
                 events.append(event)
             except:
                 continue
-        
+
         self.events = events
-        
-    
-    
+
+
     def get_tags(self):
         '''
         Pobiera najpopularniejsze tagi jakimi został opisany wykonawca.
@@ -127,22 +127,20 @@ class BandFm:
         if self._is_valid is False:
             self.tags = []
             return None
-            
+
         url = self._base_url
         soup = self.makeSoup(url)
-        
+
         # wyszukuje sekcje z tagami
         sekcja = soup.findAll("section", {"class" : "tag-section"})
-        
+
         # pozyskuje tagi
         tags = sekcja[0].findAll("a")
-        
-        self.tags = [tag.text for tag in tags]
-        
-    
-    
-    # FUNKCJE POMOCNICZE
 
+        self.tags = [tag.text for tag in tags]
+
+
+    # FUNKCJE POMOCNICZE
     # stworz obiekt beautifulsoup z url
     def makeSoup(self, url):
         '''
@@ -150,10 +148,10 @@ class BandFm:
         '''
         html = urllib.urlopen(url).read()
         soup = BeautifulSoup(html, convertEntities=BeautifulSoup.HTML_ENTITIES)
-        
+
         return soup
-    
-    
+
+
     def clean_lineup(self, lineup):
         '''
         Porzadkuje string wesjciowy z lineupem.
@@ -163,10 +161,10 @@ class BandFm:
         # gdy gra tylko jeden wykonawca
         if lineup == '':
             return [self._name.replace('+', ' ')]
-        
+
         # gdy jest kilku
         artists = str(lineup).replace('\n', '').split(',')
         list_lineup = [x.lstrip() for x in artists]
-        
+
         return list_lineup
     

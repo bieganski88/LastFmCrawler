@@ -4,13 +4,14 @@ Aplikacja ma na celu stworzenie prostego pajączka zbierającego informacje z se
 ##### MODUŁY APLIKACJI #####
 * crawlerMain.py - pobiera dane z konta LastFM zadanego użytkownika
 * band.py - pobiera informacje o zadanym zespole, a dokładniej tagi go opisujące oraz informacje o koncertach
-* geodecoder.py - dla listy koncertów wygenerowanych za pomocą band.py przypisuje lokalizację przestrzenna [klasa w opracowaniu].
+* geocoder.py - dla listy koncertów z pliku JSON przypisuje lokalizację przestrzenna, w oparciu o Google Maps API.
 
 ##### WYMAGANE BIBLIOTEKI #####
 Lista bibliotek zewnętrznych niezbędnych do prawidłowego działania aplikacji:
 * urllib,
 * BeautifulSoup,
-* json.
+* json
+* sqlite3
 
 ### ZAWARTOŚĆ MODUŁU 'CRAWLER MAIN' ###
 ##### Klasa LastFmUser
@@ -42,3 +43,18 @@ Podczas instancjonowania klasa przyjmuje jeden argument wejściowy - nazwę zesp
 * __get_tags__ - pobiera najpopularniejsze tagi jakimi został opisany wykonawca
 
 #### W pliku example.py zawarte zostały przykłady użycia powyższych klas.
+
+### ZAWARTOŚĆ MODUŁU 'geocoder' ###
+##### Klasa Geocoder
+Podczas instancjonowania przyjmuje trzy parametry wejściowe APIKEY - klucz do Google Maps API - wykorzystywana będzie usługa geokodowania,
+SRCFILE - ścieżka do pliku wejściowego z listą koncertów w formacie JSON,  DESTPATH - ścieżka do zapisu plików wynikowych, zawierającego to samo co plik wejściowy plus współrzędne geograficzne.
+###### Dostępne atrybuty:
+* __data__ - przechowuje zaczytane dane źródłowe
+* __results__ - przechowuje wyniki, czyli informacje o koncertach wraz z georeferencją
+
+###### Główne metody w klasie:
+* __str__ - 
+* __process__ - pobiera geolokalizację dla koncertów, lokalizacja określana jest z dokładnością do miasta. nieznane lokalizacje sprawdza za pomocą Google Maps Geocoding API. raz sprawdzona miejscowość trafia do pomocniczej bazy danych, tak żeby sprawdzać jej już kolejny raz za pomocą API.
+* __exportToJSON__ - eksportuje wyniki do pliku JSON w folderze wynikowym
+* __exportToDB__ - eksportuje wyniki do tabeli w bazie danych SQLite w folderze wynikowym
+

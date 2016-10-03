@@ -8,12 +8,13 @@ Created on Tue Aug 02 23:18:28 2016
 import sqlite3
 import os
 import json
-import urllib2
+import urllib
 
 # constans
-APIKEY = "A place for your API key" # klucz google maps api
-SRCFILE = "./json/events.json" # sciezka do pliku zrodlowego
-DESTPATH= "./sqlite" # sciezka do zapisu plikow wynikowych
+APIKEY = "Place for your API key"  # klucz google maps api
+SRCFILE = "./json/events.json"  # sciezka do pliku zrodlowego
+DESTPATH = "./sqlite"  # sciezka do zapisu plikow wynikowych
+
 
 class Geocoder:
     '''
@@ -22,21 +23,31 @@ class Geocoder:
     Google Maps API. Aby utowrzyć instancję tej klasy niezbędne jest podanie
     klucza dla usług Google. Wyniki zapisywane sa jako JSON oraz baza SQLite.
     '''
-    
+
     def __init__(self, APIKEY, SRCFILE, DESTPATH):
         self._apikey = APIKEY
         self._srcfile = SRCFILE
         self._destpath = DESTPATH
-        self._data = []
+        self.data = []
         self.results = []
         self._valid = False
         if self.validate() is True:
             print "\nInicjalizacja zakonczona powodzeniem."
             self._valid = True
-            self._data = self.loadData()
-    
-    
-    
+            self.data = self.loadData()
+
+
+    def __str__(self):
+        '''
+        Zwraca ilość danych wejsciowych, aktualna ilosc danych wynikowych
+        oraz sciezke do folderu wynikowego.
+        '''
+        print 'Ilosc zaladowanych danych wejsciowych: {} koncertow'.format(len(self.data))
+        print 'Ilosc przetworzonych danych gotowych do exportu: {} koncertow'.format(len(self.results))
+        print 'Sciezka zapisu wynikow: {}'.format(self._destpath)
+        return ''
+
+
     def validate(self):
         '''
         Sprawdza kompletnosc danych poczatkowych:
@@ -49,11 +60,11 @@ class Geocoder:
         if flag is False:
             print '\nNieudana inicjalizacja :Brak danych wejsciowych.'
             return False
-            
+
         # czy istnieje folder na dane wyjsciowe
         if not os.path.exists(self._destpath):
             os.makedirs(self._destpath)
-        
+
         # czy istnieje LookupTable.db
         flag = os.path.isfile('LookupTable.db')
         if flag is False:
@@ -63,18 +74,16 @@ class Geocoder:
         if flag is False:
             self.createOutputDB()
         return True
-       
-       
-       
+
+
     def loadData(self):
         '''
         Laduje plik JSON z danymi wejsciowymi.
         '''
         with open(self._srcfile) as json_data:
             data = json.load(json_data)
-        
-        return data
 
+        return data
 
 
     def process(self):
@@ -87,18 +96,18 @@ class Geocoder:
             # nawiazanie polaczenia z baza danych
             conn = sqlite3.connect('LookupTable.db')
             cur = conn.cursor()
-            
-            for event in self._data:
-                city, country = event[-2], event[-1] # city and country
+
+            for event in self.data:
+                city, country = event[-2], event[-1]  # city and country
                 print city, country
                 # zapytanie o to czy lokacja jest juz w bazie danych
                 query = u'select * from GEOLOKALIZACJE where city = "{}" and country = "{}"'.format(city, country)
                 rows = cur.execute(query.encode("UTF-8")).fetchall()
-                
-                if len(rows) > 0: # jest w bazie
+
+                if len(rows) > 0:  # jest w bazie
                     lat = rows[0][3]
                     lng = rows[0][4]
-                    
+
                 else: # trzeba pozyskac dane od wujka Googla
                     try:
                         # tworze tresc zapytania do Google API
@@ -107,7 +116,7 @@ class Geocoder:
                         url = u'{}{}&key={}'.format(url_base, url_location, self._apikey)
                         
                         #zapytanie do  google api
-                        site = urllib2.urlopen(url.encode("UTF-8"))
+                        site = urllib.urlopen(url.encode("UTF-8"))
                         data = json.load(site)
                         location = data['results'][0]['geometry']['location']
                         lat, lng = location['lat'], location['lng']
@@ -116,22 +125,21 @@ class Geocoder:
                         cur.execute(query.encode("UTF-8"))
                     except:
                         print "Cos poszlo nie tak dla >> {},{}".format(city, country)
-                
+
                 # tu juz czesc wspolna dla obu przypadkow
-                geoEvent = event[:] # kopia listy
+                geoEvent = event[:]  # kopia listy
                 geoEvent.append(lat)
                 geoEvent.append(lng)
-                
-                self.results.append(geoEvent) # dodaje do wynikow
-                
+
+                self.results.append(geoEvent)  # dodaje do wynikow
+
             # zamykam polaczenie z baza
             conn.commit()
             conn.close()
         else:
             print "Obiekt nie przeszedl inicjalizacji prawidlowo. Nie mozna kontynuowac."
-        
-        
-    
+
+
     # FUNKCJE POMOCNICZE - TWORZENIE BAZ DANYCH SQLITE
     def createLookupDB(self):
         '''
@@ -153,7 +161,6 @@ class Geocoder:
             );''')
         print "Baza danych LookupTable.db utworzona pomyslnie."
         conn.close()
-
 
 
     def createOutputDB(self):
@@ -178,21 +185,19 @@ class Geocoder:
             );''')
         print "Baza danych eventsGeom.db utworzona pomyslnie."
         conn.close()
-        
-        
-    
+
+
     # FUNKCJE POMOCNICZE - EXPORT DANYCH
     def exportToJSON(self):
         '''
         Exportuje dane wynikowe do pliku w formacie JSON.
         '''
-        with open('json/EventsGeodata.json', 'w') as outfile:
+        with open('{}/EventsGeodata.json'.format(self._destpath), 'w') as outfile:
             json.dump(self.results, outfile)
         
         print "Export do pliku JSON zakończony powodzeniem."
 
-    
-    
+
     def exportToDB(self):
         '''
         Exportuje dane wynikowe do bazy danych SQLite.
@@ -207,10 +212,10 @@ class Geocoder:
         # exportuje dane do bazy
         for record in self.results:
             # mapowanie wartosci do zmiennych
-            title = record[0].replace('"','\'')
+            title = record[0].replace('"', '\'')
             date = record[1]
-            lineup = str(record[2]).replace('"','\'')
-            place = record[3].replace('"','\'')
+            lineup = str(record[2]).replace('"', '\'')
+            place = record[3].replace('"', '\'')
             city = record[4]
             country = record[5]
             lat = record[6]
@@ -225,12 +230,11 @@ class Geocoder:
             except:
                 print "Napotkano blad podczas wykonywania polecenia:"
                 print query
-                
+
         # commit wprowadzonych zmian
         conn.commit()
         conn.close()
         print "Export do bazy danych SQLite eventsGeom.db zakończony powodzeniem."
 
 
-
-#proces = Geocoder(APIKEY, SRCFILE, DESTPATH)
+#dane = Geocoder(APIKEY, SRCFILE, DESTPATH)
