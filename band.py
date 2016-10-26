@@ -14,7 +14,7 @@ class BandFm:
     glowne tagi go opisujace oraz informacje o koncertach (data, miejsce, lineup).
     '''
 
-    def __init__(self, band_name):
+    def __init__(self, band_name, info = 0):
         '''
         Band name musi byc z '+' zamiast spacji.
         Zeby byl lekkostrawny dla
@@ -25,9 +25,12 @@ class BandFm:
         self._is_valid = self.validation()
         self.tags = []
         self.events = []
-
-        self.__str__()
         self.get_tags()
+        
+        print "Przetwarzanie {}".format(band_name)
+        if info:
+            self.__str__()
+        
 
 
     def __str__(self):
@@ -38,6 +41,7 @@ class BandFm:
         print "Strona bazowa zespolu: {}".format(self._base_url)
         print "Czy strona odpowiada: {}".format(self._is_valid)
         print "Czy zespol obecnie jest w trasie: {}".format(self._on_tour)
+        return ''
 
 
     # metody w klasie

@@ -9,6 +9,7 @@ import sqlite3
 import os
 import json
 import urllib
+import traceback
 
 # constans
 APIKEY = "Place for your API key"  # klucz google maps api
@@ -124,7 +125,10 @@ class Geocoder:
                         query = u'INSERT INTO GEOLOKALIZACJE VALUES(NULL, "{}", "{}", {}, {})'.format(country, city, lat, lng)
                         cur.execute(query.encode("UTF-8"))
                     except:
-                        print "Cos poszlo nie tak dla >> {},{}".format(city, country)
+                        try:
+                            print "Nie udane przetwarzanie dla >> {},{}".format(city, country)
+                        except:
+                            print "Nie udane przetwarzanie."
 
                 # tu juz czesc wspolna dla obu przypadkow
                 geoEvent = event[:]  # kopia listy
@@ -223,13 +227,15 @@ class Geocoder:
             
             # insert do bazy danych
             try:
-                query_part1 = u'INSERT INTO EVENTS VALUES'
+                query_part1 = u'INSERT INTO events VALUES'
                 query_part2 = u'(NULL, "{}", "{}", "{}", "{}", "{}", "{}", {}, {})'.format(title, date, lineup, place, city, country, lat, lng)
                 query = query_part1 + query_part2            
                 cur.execute(query.encode("UTF-8"))
             except:
                 print "Napotkano blad podczas wykonywania polecenia:"
                 print query
+                tb = traceback.format_exc()
+                print tb
 
         # commit wprowadzonych zmian
         conn.commit()
@@ -237,4 +243,4 @@ class Geocoder:
         print "Export do bazy danych SQLite eventsGeom.db zakończony powodzeniem."
 
 
-#dane = Geocoder(APIKEY, SRCFILE, DESTPATH)
+dane = Geocoder(APIKEY, SRCFILE, DESTPATH)

@@ -63,17 +63,20 @@ class LastFmUser:
         self.concertList = []
 
 
-    def get_scrobbles(self, number_of_pages):
+    def get_scrobbles(self, start_page, end_page):
         '''
         Pobiera informacje o przesluchanych utworach z zadanej ilosci stron.
         '''
-        if number_of_pages > self._nrOfPages['scrobbles']:
+        if start_page <= 0:
+            start_page = 1  # korekta wartosci
+            
+        if end_page > self._nrOfPages['scrobbles']:
             print 'Zbyt duzy argument wejsciowy'
             return None
  
         # generuje linki dla stron do sprawdzenia
         url = u'http://www.last.fm/user/{}/library'.format(self._username)
-        linki = [u'{}?page={}'.format(url, x+1) for x in range(number_of_pages)]
+        linki = [u'{}?page={}'.format(url, x) for x in range(start_page, end_page+1)]
 
         # ekstrakcja playlisty
         przesluchane = []
@@ -83,17 +86,20 @@ class LastFmUser:
         self.scrobbles = przesluchane
 
 
-    def get_artists(self, number_of_pages):
+    def get_artists(self, start_page, end_page):
         '''
         Pobiera informacje o ulubionych artystach z zdanej ilosci stron.
         '''
-        if number_of_pages > self._nrOfPages['artists']:
+        if start_page <= 0:
+            start_page = 1
+        
+        if end_page > self._nrOfPages['artists']:
             print 'Zbyt duzy argument wejsciowy'
             return None
 
         # generuje linki dla stron do sprawdzenia
         url = u'http://www.last.fm/user/{}/library/artists'.format(self._username)
-        linki = [u'{}?page={}'.format(url, x+1) for x in range(number_of_pages)]
+        linki = [u'{}?page={}'.format(url, x) for x in range(start_page, end_page+1)]
 
         # ekstrakcja playlisty
         wykonawcy = []
