@@ -15,6 +15,7 @@ import traceback
 APIKEY = "Place for your API key"  # klucz google maps api
 SRCFILE = "./json/events.json"  # sciezka do pliku zrodlowego
 DESTPATH = "./sqlite"  # sciezka do zapisu plikow wynikowych
+DJANGO_DB = "D:\Cloud\Dropbox\IT\python\django\eventsMap\eventsMap"  # sciezka do bazy sqlite z aplikacji Django
 
 
 class Geocoder:
@@ -25,10 +26,11 @@ class Geocoder:
     klucza dla usług Google. Wyniki zapisywane sa jako JSON oraz baza SQLite.
     '''
 
-    def __init__(self, APIKEY, SRCFILE, DESTPATH):
+    def __init__(self, APIKEY, SRCFILE, DESTPATH, DJANGO_DB):
         self._apikey = APIKEY
         self._srcfile = SRCFILE
         self._destpath = DESTPATH
+        self._django = DJANGO_DB
         self.data = []
         self.results = []
         self._valid = False
@@ -176,7 +178,7 @@ class Geocoder:
         conn = sqlite3.connect('{0}/eventsGeom.db'.format(self._destpath))
         # tworzenie tabeli
         conn.execute('''
-            CREATE TABLE EVENTS
+            CREATE TABLE events_musicevents
             (ID INTEGER PRIMARY KEY,
             TITLE CHAR(50) NOT NULL,
             DATE CHAR(25) NOT NULL,
@@ -202,15 +204,23 @@ class Geocoder:
         print "Export do pliku JSON zakończony powodzeniem."
 
 
-    def exportToDB(self):
+    def exportToDB(self, django = "false"):
         '''
         Exportuje dane wynikowe do bazy danych SQLite.
         '''
         # nawiazuje polaczenie z baza danych
-        conn = sqlite3.connect('{0}/eventsGeom.db'.format(self._destpath))
+        if django:
+            try:
+                conn = sqlite3.connect('{}\db.sqlite3'.format(self._django))
+            except:
+                print "Nie udalo sie nawiazac polaczenia z baza danych - SQLite."
+                print "Prosze zweryfikowac zadeklarowana sciezke dostepu do aplikacji Django"
+                return False
+        else:
+            conn = sqlite3.connect('{0}/eventsGeom.db'.format(self._destpath))
         cur = conn.cursor()
         # czyszcze tabele
-        cur.execute("DELETE FROM EVENTS")
+        cur.execute("DELETE FROM EVENTS_MUSICEVENTS")
         conn.commit()
         
         # exportuje dane do bazy
@@ -227,7 +237,7 @@ class Geocoder:
             
             # insert do bazy danych
             try:
-                query_part1 = u'INSERT INTO events VALUES'
+                query_part1 = u'INSERT INTO events_musicevents VALUES'
                 query_part2 = u'(NULL, "{}", "{}", "{}", "{}", "{}", "{}", {}, {})'.format(title, date, lineup, place, city, country, lat, lng)
                 query = query_part1 + query_part2            
                 cur.execute(query.encode("UTF-8"))
@@ -240,7 +250,18 @@ class Geocoder:
         # commit wprowadzonych zmian
         conn.commit()
         conn.close()
-        print "Export do bazy danych SQLite eventsGeom.db zakończony powodzeniem."
+        if django:
+            print "Export do bazy SQLite dedykowanej aplikacji Django zakończony powodzeniem."
+        else:
+            print "Export do bazy danych SQLite eventsGeom.db zakończony powodzeniem."
 
 
-dane = Geocoder(APIKEY, SRCFILE, DESTPATH)
+    def exportToDjango(self):
+        '''
+        Eksport danych do skojarzonej bazy sqlite aplikacji Django,
+        ktora posluzy do prezentacji danych na mapie.
+        '''
+        self.exportToDB(True) # true - oznacza import do bazy django
+
+
+dane = Geocoder(APIKEY, SRCFILE, DESTPATH, DJANGO_DB)
