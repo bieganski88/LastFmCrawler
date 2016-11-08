@@ -5,6 +5,7 @@ Created on Tue Jul 26 07:35:55 2016
 @author: Przemyslaw Bieganski, bieg4n@gmail.com
 """
 import urllib
+import itertools
 from BeautifulSoup import *
 
 
@@ -101,7 +102,8 @@ class BandFm:
 
         for index in range(len(when)):
             try:
-                event = []
+                # nazwa zespolu
+                event = [str(self._name).replace('+', ' ')]
                 # nazwa imprezy 
                 event.append(who[index].div.a.text)
                 # data
@@ -119,8 +121,11 @@ class BandFm:
                 events.append(event)
             except:
                 continue
-
-        self.events = events
+        
+        # usuwanie duplikatow na liscie koncertow
+        events.sort()
+        # ['AAABBCCCD'] => ['ABCD']
+        self.events = list(event for event,_ in itertools.groupby(events))
 
 
     def get_tags(self):
