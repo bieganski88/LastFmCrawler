@@ -287,6 +287,3 @@ class Geocoder:
         ktora posluzy do prezentacji danych na mapie.
         '''
         self.exportToDB(True) # true - oznacza import do bazy django
-
-
-dane = Geocoder(APIKEY, SRCFILE, DESTPATH, DJANGO_DB)
