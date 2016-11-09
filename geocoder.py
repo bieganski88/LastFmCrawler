@@ -15,7 +15,7 @@ import traceback
 APIKEY = "Place for your API key"  # klucz google maps api
 SRCFILE = "./json/events.json"  # sciezka do pliku zrodlowego
 DESTPATH = "./sqlite"  # sciezka do zapisu plikow wynikowych
-DJANGO_DB = "D:\Cloud\Dropbox\IT\python\django\eventsMap\eventsMap"  # sciezka do bazy sqlite z aplikacji Django
+DJANGO_DB = "E:\cloud\Dropbox\IT\python\django\eventsMap\eventsMap"  # sciezka do bazy sqlite z aplikacji Django
 
 
 class Geocoder:
@@ -178,8 +178,9 @@ class Geocoder:
         conn = sqlite3.connect('{0}/eventsGeom.db'.format(self._destpath))
         # tworzenie tabeli
         conn.execute('''
-            CREATE TABLE events_musicevents
+            CREATE TABLE EVENTS_MUSICEVENTS
             (ID INTEGER PRIMARY KEY,
+            ARTIST CHAR(50) NOT NULL,
             TITLE CHAR(50) NOT NULL,
             DATE CHAR(25) NOT NULL,
             LINEUP TEXT,
@@ -198,13 +199,36 @@ class Geocoder:
         '''
         Exportuje dane wynikowe do pliku w formacie JSON.
         '''
+        # export do standardowego jsona
         with open('{}/EventsGeodata.json'.format(self._destpath), 'w') as outfile:
-            json.dump(self.results, outfile)
+            json.dump(self.results, outfile, indent=4)
+            
+        # export do geojson
+        geodata = self.results
+        properties_keys = ['artist', 'title', 'date', 'lineup', 'place',
+                       'city', 'country'] # klucze do opisu danych nie geometrycznych
+                       
+        featureCollection = {'type': "FeatureCollection"} # element glowny pliku json
+        features = [] # agregat na obiekty
         
-        print "Export do pliku JSON zakończony powodzeniem."
+        for event in geodata:
+            coordinates = [event[-1], event[-2]]
+            properties = event[:-2]
+            feature = {"type": "Feature",
+                       "geometry": {"type": "Point", "coordinates": coordinates},
+                       "properties": dict(zip(properties_keys, properties))
+                       }
+            features.append(feature)
+        
+        featureCollection["features"] = features
+        
+        with open('{}/EventsGeoJSON.json'.format(self._destpath), 'w') as outfile:
+            json.dump(featureCollection, outfile, indent=4)
+                
+        print "Export do pliku JSON oraz GEOJSON zakończony powodzeniem."
 
 
-    def exportToDB(self, django = "false"):
+    def exportToDB(self, django = False):
         '''
         Exportuje dane wynikowe do bazy danych SQLite.
         '''
@@ -226,19 +250,20 @@ class Geocoder:
         # exportuje dane do bazy
         for record in self.results:
             # mapowanie wartosci do zmiennych
-            title = record[0].replace('"', '\'')
-            date = record[1]
-            lineup = str(record[2]).replace('"', '\'')
-            place = record[3].replace('"', '\'')
-            city = record[4]
-            country = record[5]
-            lat = record[6]
-            lng = record[7]
+            artist = record[0].replace('"', '\'')
+            title = record[1].replace('"', '\'')
+            date = record[2]
+            lineup = str(record[3]).replace('"', '\'')
+            place = record[4].replace('"', '\'')
+            city = record[5]
+            country = record[6]
+            lat = record[7]
+            lng = record[8]
             
             # insert do bazy danych
             try:
                 query_part1 = u'INSERT INTO events_musicevents VALUES'
-                query_part2 = u'(NULL, "{}", "{}", "{}", "{}", "{}", "{}", {}, {})'.format(title, date, lineup, place, city, country, lat, lng)
+                query_part2 = u'(NULL, "{}", "{}", "{}", "{}", "{}", "{}", "{}", {}, {})'.format(artist, title, date, lineup, place, city, country, lat, lng)
                 query = query_part1 + query_part2            
                 cur.execute(query.encode("UTF-8"))
             except:

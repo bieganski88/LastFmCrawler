@@ -139,15 +139,38 @@ class LastFmUser:
         '''
         Zrzuca scroble, artystow oraz koncerty do jsona.
         '''
-        # przesluchane utwory
+        # przesluchane utwory -lista
         with open('json/scrobbles.json', 'w') as outfile:
-            json.dump(self.scrobbles, outfile)
-        # ulubieni wykonawcy
+            json.dump(self.scrobbles, outfile, indent=4)
+        # przesluchane utwory - slownik
+        scrobble_keys = ['artist', 'title', 'date']
+        scrobbles_with_keys = []
+        for scrobble in self.scrobbles:
+            scrobbles_with_keys.append(dict(zip(scrobble_keys, scrobble)))
+        with open('json/scrobblesDict.json', 'w') as outfile:
+            json.dump(scrobbles_with_keys, outfile, indent=4)
+        
+        # ulubieni wykonawcy - lista
         with open('json/artists.json', 'w') as outfile:
-            json.dump(self.artists, outfile)
-        # koncerty
+            json.dump(self.artists, outfile, indent=4)
+        # ulubieni wykonawcy - slownik
+        artist_keys = ['artist', 'url', 'scrobbles']
+        artists_with_keys = []
+        for artist in self.artists:
+            artists_with_keys.append(dict(zip(artist_keys, artist)))
+        with open('json/artistsDict.json', 'w') as outfile:
+            json.dump(artists_with_keys, outfile, indent=4)
+
+        # koncerty - lista
         with open('json/events.json', 'w') as outfile:
-            json.dump(self.concertList, outfile)
+            json.dump(self.concertList, outfile, indent=4)
+        # koncerty - dict
+        event_keys = ['artist', 'title', 'date', 'lineup', 'place', 'city', 'country']
+        events_with_keys = []
+        for event in self.concertList:
+            events_with_keys.append(dict(zip(event_keys, event)))
+        with open('json/eventsDict.json', 'w') as outfile:
+            json.dump(events_with_keys, outfile, indent=4)
 
 
     # pobieranie danych dotyczacych scrobbli
