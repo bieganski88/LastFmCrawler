@@ -15,7 +15,7 @@ import traceback
 APIKEY = "Place for your API key"  # klucz google maps api
 SRCFILE = "./json/events.json"  # sciezka do pliku zrodlowego
 DESTPATH = "./sqlite"  # sciezka do zapisu plikow wynikowych
-DJANGO_DB = "E:\cloud\Dropbox\IT\python\django\eventsMap\eventsMap"  # sciezka do bazy sqlite z aplikacji Django
+DJANGO_DB = "D:\Cloud\Dropbox\IT\python\django\eventsMap\eventsMap"  # sciezka do bazy sqlite z aplikacji Django
 
 
 class Geocoder:
@@ -182,9 +182,9 @@ class Geocoder:
             (ID INTEGER PRIMARY KEY,
             ARTIST CHAR(50) NOT NULL,
             TITLE CHAR(50) NOT NULL,
-            DATE CHAR(25) NOT NULL,
+            EVENT_DATE CHAR(25) NOT NULL,
             LINEUP TEXT,
-            PLACE_NAME CHAR(50),
+            PLACE CHAR(50),
             CITY CHAR(50) NOT NULL,
             COUNTRY CHAR(50) NOT NULL,
             LATITUDE REAL NOT NULL,
@@ -262,7 +262,7 @@ class Geocoder:
             
             # insert do bazy danych
             try:
-                query_part1 = u'INSERT INTO events_musicevents VALUES'
+                query_part1 = u'INSERT INTO events_musicevents (id, artist, title, event_date, lineup, place, city, country, latitude, longitude) VALUES'
                 query_part2 = u'(NULL, "{}", "{}", "{}", "{}", "{}", "{}", "{}", {}, {})'.format(artist, title, date, lineup, place, city, country, lat, lng)
                 query = query_part1 + query_part2            
                 cur.execute(query.encode("UTF-8"))
