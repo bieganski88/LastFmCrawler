@@ -1,0 +1,758 @@
+[
+    [
+        "Emancipator", 
+        "Emancipator", 
+        "2016-11-25T00:00:00", 
+        [
+            "Emancipator"
+        ], 
+        "Celebrity's Nightclub", 
+        "Vancouver, BC", 
+        "Canada", 
+        49.2827291, 
+        -123.1207375
+    ], 
+    [
+        "Zebrahead", 
+        "Skindred", 
+        "2016-11-29T00:00:00", 
+        [
+            "Zebrahead", 
+            "Sanguine"
+        ], 
+        "Columbia Theater", 
+        "Berlin", 
+        "Germany", 
+        52.5200066, 
+        13.404954
+    ], 
+    [
+        "Zebrahead", 
+        "Skindred", 
+        "2016-12-06T00:00:00", 
+        [
+            "Zebrahead"
+        ], 
+        "Conne Island", 
+        "Leipzig", 
+        "Germany", 
+        51.3396955, 
+        12.3730747
+    ], 
+    [
+        "Zebrahead", 
+        "Skindred", 
+        "2016-12-08T00:00:00", 
+        [
+            "Zebrahead"
+        ], 
+        "Skaters Palace", 
+        "M\u00fcnster", 
+        "Germany", 
+        51.9606649, 
+        7.6261347
+    ], 
+    [
+        "Zebrahead", 
+        "Skindred", 
+        "2016-12-11T00:00:00", 
+        [
+            "Zebrahead", 
+            "Skindred"
+        ], 
+        "Kulturzentrum Faust", 
+        "Hannover", 
+        "Germany", 
+        52.3758916, 
+        9.7320104
+    ], 
+    [
+        "Zebrahead", 
+        "Skindred", 
+        "2016-12-13T00:00:00", 
+        [
+            "Zebrahead"
+        ], 
+        "Essigfabrik", 
+        "Cologne", 
+        "Germany", 
+        50.937531, 
+        6.9602786
+    ], 
+    [
+        "Zebrahead", 
+        "Skindred + Zebrahead", 
+        "2016-12-15T00:00:00", 
+        [
+            "Zebrahead", 
+            "Skindred"
+        ], 
+        "HsD", 
+        "Erfurt", 
+        "Germany", 
+        50.9847679, 
+        11.0298799
+    ], 
+    [
+        "Zebrahead", 
+        "X-MAS BASH", 
+        "2016-12-16T00:00:00", 
+        [
+            "Zebrahead", 
+            "Unleash The Sky", 
+            "Skindred", 
+            "Emil Bulls", 
+            "Burning Down Alaska", 
+            "Any Given Day", 
+            "Annisokay"
+        ], 
+        "Tonhalle - Kultfabrik", 
+        "Munich", 
+        "Germany", 
+        48.1351253, 
+        11.5819806
+    ], 
+    [
+        "Zebrahead", 
+        "Zebrahead + Skindred", 
+        "2016-11-30T00:00:00", 
+        [
+            "Skindred", 
+            "Zebrahead"
+        ], 
+        "Posthalle", 
+        "W\u00fcrzburg", 
+        "Germany", 
+        49.7913044, 
+        9.9533548
+    ], 
+    [
+        "Sum 41", 
+        "Don't Call It a Sum-Back Tour", 
+        "2017-02-16T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "Schlachthof", 
+        "Wiesbaden", 
+        "Germany", 
+        50.0782184, 
+        8.2397608
+    ], 
+    [
+        "Sum 41", 
+        "Festival VIVO X El Rock 8", 
+        "2016-12-17T00:00:00", 
+        [
+            "Sum 41", 
+            "Garbage", 
+            "6 Voltios", 
+            "Amen", 
+            "Aterciopelados", 
+            "Divisi?n Min?scula", 
+            "Fito P?ez", 
+            "Gondwana", 
+            "Hoobastank", 
+            "Ill Ni?o"
+        ], 
+        "Estadio San Marcos", 
+        "Lima", 
+        "Peru", 
+        -12.046374, 
+        -77.0427934
+    ], 
+    [
+        "Sum 41", 
+        "Frontera 2016", 
+        "2016-12-03T00:00:00", 
+        [
+            "Sum 41", 
+            "Attaque 77", 
+            "Christina Rosenvinge", 
+            "Churupaca", 
+            "Como Asesinar a Felipes", 
+            "D?nver", 
+            "Emir Kusturica & The No Smoking Orchestra", 
+            "Gondwana", 
+            "Ileana"
+        ], 
+        "Club Hipico de Santiago", 
+        "Santiago de Chile", 
+        "Chile", 
+        -33.4488897, 
+        -70.6692655
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2016-12-08T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "Tropical Dance", 
+        "S\u00e3o Paulo", 
+        "Brazil", 
+        -23.5505199, 
+        -46.6333094
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2016-12-10T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "Escena", 
+        "Monterrey", 
+        "Mexico", 
+        25.6866142, 
+        -100.3161126
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2016-12-11T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "C3 stage", 
+        "Guadalajara Jalisco", 
+        "Mexico", 
+        20.6596988, 
+        -103.3496092
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2016-12-12T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "Pepsi Center WTC", 
+        "Ciudad de M\u00e9xico", 
+        "Mexico", 
+        19.4326077, 
+        -99.133208
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2017-01-17T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "Razzmatazz", 
+        "Barcelona", 
+        "Spain", 
+        41.3850639, 
+        2.1734035
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2017-01-18T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "La Riviera", 
+        "Madrid", 
+        "Spain", 
+        40.4167754, 
+        -3.7037902
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2017-01-20T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "Coliseu dos Recreios", 
+        "Lisboa", 
+        "Portugal", 
+        38.7222524, 
+        -9.1393366
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2017-01-22T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "Le Bikini", 
+        "Ramonville-Saint-Agne", 
+        "France", 
+        43.543794, 
+        1.4784139
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2017-01-24T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "La Paloma", 
+        "N\u00eemes", 
+        "France", 
+        43.836699, 
+        4.360054
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2017-01-25T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "Dock des Suds", 
+        "Marseille", 
+        "France", 
+        43.296482, 
+        5.36978
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2017-01-26T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "Transbordeur", 
+        "Villeurbanne", 
+        "France", 
+        45.771944, 
+        4.8901709
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2017-01-28T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "Gran Teatro GEOX", 
+        "Padova", 
+        "Italy", 
+        45.4064349, 
+        11.8767611
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2017-01-29T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "Mediolanum Forum", 
+        "Assago", 
+        "Italy", 
+        45.4061985, 
+        9.1239694
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2017-01-31T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "Atlantico Live", 
+        "Roma", 
+        "Italy", 
+        41.9027835, 
+        12.4963655
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2017-02-02T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "Les Docks", 
+        "Lausanne", 
+        "Switzerland", 
+        46.5196535, 
+        6.6322734
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2017-02-03T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "Komplex", 
+        "Z\u00fcrich", 
+        "Switzerland", 
+        47.3768866, 
+        8.541694
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2017-02-04T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "Gasometer", 
+        "Vienna", 
+        "Austria", 
+        48.2081743, 
+        16.3738189
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2017-02-06T00:00:00", 
+        [
+            "Sum 41", 
+            "Senses Fail"
+        ], 
+        "Roxy", 
+        "Praha", 
+        "Czech Republic", 
+        50.0755381, 
+        14.4378005
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2017-02-07T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "Proxima", 
+        "Warszawa", 
+        "Poland", 
+        52.2296756, 
+        21.0122287
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2017-02-09T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "Astra", 
+        "Berlin", 
+        "Germany", 
+        52.5200066, 
+        13.404954
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2017-02-10T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "T\u00e4ubchenthal", 
+        "Leipzig", 
+        "Germany", 
+        51.3396955, 
+        12.3730747
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2017-02-11T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "Muffathalle", 
+        "Munich", 
+        "Germany", 
+        48.1351253, 
+        11.5819806
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2017-02-17T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "L\u00f6wensaal", 
+        "N\u00fcrnberg", 
+        "Germany", 
+        49.45203, 
+        11.07675
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2017-02-18T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "Palladium", 
+        "Cologne", 
+        "Germany", 
+        50.937531, 
+        6.9602786
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2017-02-20T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "La Coop\u00e9rative de Mai", 
+        "Clermont-Ferrand", 
+        "France", 
+        45.777222, 
+        3.087025
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2017-02-21T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "Le 106", 
+        "Rouen", 
+        "France", 
+        49.443232, 
+        1.099971
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2017-02-22T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "Le Z\u00e9nith", 
+        "Paris", 
+        "France", 
+        48.856614, 
+        2.3522219
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2017-02-24T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "O2 Academy Birmingham", 
+        "Birmingham", 
+        "United Kingdom", 
+        52.486243, 
+        -1.890401
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2017-02-25T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "Manchester Academy", 
+        "Manchester", 
+        "United Kingdom", 
+        53.4807593, 
+        -2.2426305
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2017-02-26T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "O2 Academy", 
+        "Leeds", 
+        "United Kingdom", 
+        53.8007554, 
+        -1.5490774
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2017-02-28T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "Barrowlands", 
+        "Glasgow", 
+        "United Kingdom", 
+        55.864237, 
+        -4.251806
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2017-03-01T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "The Hippodrome Kingston", 
+        "London", 
+        "United Kingdom", 
+        51.5073509, 
+        -0.1277583
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2017-03-02T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "O2 Academy Brixton", 
+        "London", 
+        "United Kingdom", 
+        51.5073509, 
+        -0.1277583
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2017-03-03T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "O2 Academy Bristol", 
+        "Bristol", 
+        "United Kingdom", 
+        51.454513, 
+        -2.58791
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2017-03-04T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "Rock City", 
+        "Nottingham", 
+        "United Kingdom", 
+        52.9547832, 
+        -1.1581086
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2017-03-06T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "O2 Guildhall Southampton", 
+        "Southampton", 
+        "United Kingdom", 
+        50.9097004, 
+        -1.4043509
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2017-03-08T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "Ancienne Belgique", 
+        "Brussels", 
+        "Belgium", 
+        50.8503396, 
+        4.3517103
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2017-03-09T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "Rockhal", 
+        "Esch-sur-Alzette", 
+        "Luxembourg", 
+        49.5008805, 
+        5.9860925
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2017-03-10T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "013", 
+        "Tilburg", 
+        "Netherlands", 
+        51.560596, 
+        5.0919143
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2017-03-12T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "L'A\u00e9ronef", 
+        "Euralille", 
+        "France", 
+        50.6457116, 
+        3.0733845
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2017-03-13T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "Grosse Freiheit 36", 
+        "Hamburg", 
+        "Germany", 
+        53.5510846, 
+        9.9936818
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2017-03-15T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "Arenan/Fryshuset", 
+        "Stockholm", 
+        "Sweden", 
+        59.3293235, 
+        18.0685808
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41", 
+        "2017-03-17T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "Tavastia", 
+        "Helsinki", 
+        "Finland", 
+        60.1698557, 
+        24.938379
+    ], 
+    [
+        "Sum 41", 
+        "Sum 41 @ Santana 27 (Bilbao)", 
+        "2017-01-21T00:00:00", 
+        [
+            "Sum 41"
+        ], 
+        "Santana 27", 
+        "Bilbao", 
+        "Spain", 
+        43.2630126, 
+        -2.9349852
+    ]
+]

@@ -1,0 +1,1209 @@
+{
+    "type": "FeatureCollection", 
+    "features": [
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -123.1207375, 
+                    49.2827291
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Vancouver, BC", 
+                "title": "Emancipator", 
+                "country": "Canada", 
+                "artist": "Emancipator", 
+                "place": "Celebrity's Nightclub", 
+                "date": "2016-11-25T00:00:00", 
+                "lineup": [
+                    "Emancipator"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    13.404954, 
+                    52.5200066
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Berlin", 
+                "title": "Skindred", 
+                "country": "Germany", 
+                "artist": "Zebrahead", 
+                "place": "Columbia Theater", 
+                "date": "2016-11-29T00:00:00", 
+                "lineup": [
+                    "Zebrahead", 
+                    "Sanguine"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    12.3730747, 
+                    51.3396955
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Leipzig", 
+                "title": "Skindred", 
+                "country": "Germany", 
+                "artist": "Zebrahead", 
+                "place": "Conne Island", 
+                "date": "2016-12-06T00:00:00", 
+                "lineup": [
+                    "Zebrahead"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    7.6261347, 
+                    51.9606649
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "M\u00fcnster", 
+                "title": "Skindred", 
+                "country": "Germany", 
+                "artist": "Zebrahead", 
+                "place": "Skaters Palace", 
+                "date": "2016-12-08T00:00:00", 
+                "lineup": [
+                    "Zebrahead"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    9.7320104, 
+                    52.3758916
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Hannover", 
+                "title": "Skindred", 
+                "country": "Germany", 
+                "artist": "Zebrahead", 
+                "place": "Kulturzentrum Faust", 
+                "date": "2016-12-11T00:00:00", 
+                "lineup": [
+                    "Zebrahead", 
+                    "Skindred"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    6.9602786, 
+                    50.937531
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Cologne", 
+                "title": "Skindred", 
+                "country": "Germany", 
+                "artist": "Zebrahead", 
+                "place": "Essigfabrik", 
+                "date": "2016-12-13T00:00:00", 
+                "lineup": [
+                    "Zebrahead"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    11.0298799, 
+                    50.9847679
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Erfurt", 
+                "title": "Skindred + Zebrahead", 
+                "country": "Germany", 
+                "artist": "Zebrahead", 
+                "place": "HsD", 
+                "date": "2016-12-15T00:00:00", 
+                "lineup": [
+                    "Zebrahead", 
+                    "Skindred"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    11.5819806, 
+                    48.1351253
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Munich", 
+                "title": "X-MAS BASH", 
+                "country": "Germany", 
+                "artist": "Zebrahead", 
+                "place": "Tonhalle - Kultfabrik", 
+                "date": "2016-12-16T00:00:00", 
+                "lineup": [
+                    "Zebrahead", 
+                    "Unleash The Sky", 
+                    "Skindred", 
+                    "Emil Bulls", 
+                    "Burning Down Alaska", 
+                    "Any Given Day", 
+                    "Annisokay"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    9.9533548, 
+                    49.7913044
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "W\u00fcrzburg", 
+                "title": "Zebrahead + Skindred", 
+                "country": "Germany", 
+                "artist": "Zebrahead", 
+                "place": "Posthalle", 
+                "date": "2016-11-30T00:00:00", 
+                "lineup": [
+                    "Skindred", 
+                    "Zebrahead"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    8.2397608, 
+                    50.0782184
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Wiesbaden", 
+                "title": "Don't Call It a Sum-Back Tour", 
+                "country": "Germany", 
+                "artist": "Sum 41", 
+                "place": "Schlachthof", 
+                "date": "2017-02-16T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -77.0427934, 
+                    -12.046374
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Lima", 
+                "title": "Festival VIVO X El Rock 8", 
+                "country": "Peru", 
+                "artist": "Sum 41", 
+                "place": "Estadio San Marcos", 
+                "date": "2016-12-17T00:00:00", 
+                "lineup": [
+                    "Sum 41", 
+                    "Garbage", 
+                    "6 Voltios", 
+                    "Amen", 
+                    "Aterciopelados", 
+                    "Divisi?n Min?scula", 
+                    "Fito P?ez", 
+                    "Gondwana", 
+                    "Hoobastank", 
+                    "Ill Ni?o"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -70.6692655, 
+                    -33.4488897
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Santiago de Chile", 
+                "title": "Frontera 2016", 
+                "country": "Chile", 
+                "artist": "Sum 41", 
+                "place": "Club Hipico de Santiago", 
+                "date": "2016-12-03T00:00:00", 
+                "lineup": [
+                    "Sum 41", 
+                    "Attaque 77", 
+                    "Christina Rosenvinge", 
+                    "Churupaca", 
+                    "Como Asesinar a Felipes", 
+                    "D?nver", 
+                    "Emir Kusturica & The No Smoking Orchestra", 
+                    "Gondwana", 
+                    "Ileana"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -46.6333094, 
+                    -23.5505199
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "S\u00e3o Paulo", 
+                "title": "Sum 41", 
+                "country": "Brazil", 
+                "artist": "Sum 41", 
+                "place": "Tropical Dance", 
+                "date": "2016-12-08T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -100.3161126, 
+                    25.6866142
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Monterrey", 
+                "title": "Sum 41", 
+                "country": "Mexico", 
+                "artist": "Sum 41", 
+                "place": "Escena", 
+                "date": "2016-12-10T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -103.3496092, 
+                    20.6596988
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Guadalajara Jalisco", 
+                "title": "Sum 41", 
+                "country": "Mexico", 
+                "artist": "Sum 41", 
+                "place": "C3 stage", 
+                "date": "2016-12-11T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -99.133208, 
+                    19.4326077
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Ciudad de M\u00e9xico", 
+                "title": "Sum 41", 
+                "country": "Mexico", 
+                "artist": "Sum 41", 
+                "place": "Pepsi Center WTC", 
+                "date": "2016-12-12T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    2.1734035, 
+                    41.3850639
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Barcelona", 
+                "title": "Sum 41", 
+                "country": "Spain", 
+                "artist": "Sum 41", 
+                "place": "Razzmatazz", 
+                "date": "2017-01-17T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -3.7037902, 
+                    40.4167754
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Madrid", 
+                "title": "Sum 41", 
+                "country": "Spain", 
+                "artist": "Sum 41", 
+                "place": "La Riviera", 
+                "date": "2017-01-18T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -9.1393366, 
+                    38.7222524
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Lisboa", 
+                "title": "Sum 41", 
+                "country": "Portugal", 
+                "artist": "Sum 41", 
+                "place": "Coliseu dos Recreios", 
+                "date": "2017-01-20T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    1.4784139, 
+                    43.543794
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Ramonville-Saint-Agne", 
+                "title": "Sum 41", 
+                "country": "France", 
+                "artist": "Sum 41", 
+                "place": "Le Bikini", 
+                "date": "2017-01-22T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    4.360054, 
+                    43.836699
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "N\u00eemes", 
+                "title": "Sum 41", 
+                "country": "France", 
+                "artist": "Sum 41", 
+                "place": "La Paloma", 
+                "date": "2017-01-24T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    5.36978, 
+                    43.296482
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Marseille", 
+                "title": "Sum 41", 
+                "country": "France", 
+                "artist": "Sum 41", 
+                "place": "Dock des Suds", 
+                "date": "2017-01-25T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    4.8901709, 
+                    45.771944
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Villeurbanne", 
+                "title": "Sum 41", 
+                "country": "France", 
+                "artist": "Sum 41", 
+                "place": "Transbordeur", 
+                "date": "2017-01-26T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    11.8767611, 
+                    45.4064349
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Padova", 
+                "title": "Sum 41", 
+                "country": "Italy", 
+                "artist": "Sum 41", 
+                "place": "Gran Teatro GEOX", 
+                "date": "2017-01-28T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    9.1239694, 
+                    45.4061985
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Assago", 
+                "title": "Sum 41", 
+                "country": "Italy", 
+                "artist": "Sum 41", 
+                "place": "Mediolanum Forum", 
+                "date": "2017-01-29T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    12.4963655, 
+                    41.9027835
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Roma", 
+                "title": "Sum 41", 
+                "country": "Italy", 
+                "artist": "Sum 41", 
+                "place": "Atlantico Live", 
+                "date": "2017-01-31T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    6.6322734, 
+                    46.5196535
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Lausanne", 
+                "title": "Sum 41", 
+                "country": "Switzerland", 
+                "artist": "Sum 41", 
+                "place": "Les Docks", 
+                "date": "2017-02-02T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    8.541694, 
+                    47.3768866
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Z\u00fcrich", 
+                "title": "Sum 41", 
+                "country": "Switzerland", 
+                "artist": "Sum 41", 
+                "place": "Komplex", 
+                "date": "2017-02-03T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    16.3738189, 
+                    48.2081743
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Vienna", 
+                "title": "Sum 41", 
+                "country": "Austria", 
+                "artist": "Sum 41", 
+                "place": "Gasometer", 
+                "date": "2017-02-04T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    14.4378005, 
+                    50.0755381
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Praha", 
+                "title": "Sum 41", 
+                "country": "Czech Republic", 
+                "artist": "Sum 41", 
+                "place": "Roxy", 
+                "date": "2017-02-06T00:00:00", 
+                "lineup": [
+                    "Sum 41", 
+                    "Senses Fail"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    21.0122287, 
+                    52.2296756
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Warszawa", 
+                "title": "Sum 41", 
+                "country": "Poland", 
+                "artist": "Sum 41", 
+                "place": "Proxima", 
+                "date": "2017-02-07T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    13.404954, 
+                    52.5200066
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Berlin", 
+                "title": "Sum 41", 
+                "country": "Germany", 
+                "artist": "Sum 41", 
+                "place": "Astra", 
+                "date": "2017-02-09T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    12.3730747, 
+                    51.3396955
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Leipzig", 
+                "title": "Sum 41", 
+                "country": "Germany", 
+                "artist": "Sum 41", 
+                "place": "T\u00e4ubchenthal", 
+                "date": "2017-02-10T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    11.5819806, 
+                    48.1351253
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Munich", 
+                "title": "Sum 41", 
+                "country": "Germany", 
+                "artist": "Sum 41", 
+                "place": "Muffathalle", 
+                "date": "2017-02-11T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    11.07675, 
+                    49.45203
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "N\u00fcrnberg", 
+                "title": "Sum 41", 
+                "country": "Germany", 
+                "artist": "Sum 41", 
+                "place": "L\u00f6wensaal", 
+                "date": "2017-02-17T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    6.9602786, 
+                    50.937531
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Cologne", 
+                "title": "Sum 41", 
+                "country": "Germany", 
+                "artist": "Sum 41", 
+                "place": "Palladium", 
+                "date": "2017-02-18T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    3.087025, 
+                    45.777222
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Clermont-Ferrand", 
+                "title": "Sum 41", 
+                "country": "France", 
+                "artist": "Sum 41", 
+                "place": "La Coop\u00e9rative de Mai", 
+                "date": "2017-02-20T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    1.099971, 
+                    49.443232
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Rouen", 
+                "title": "Sum 41", 
+                "country": "France", 
+                "artist": "Sum 41", 
+                "place": "Le 106", 
+                "date": "2017-02-21T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    2.3522219, 
+                    48.856614
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Paris", 
+                "title": "Sum 41", 
+                "country": "France", 
+                "artist": "Sum 41", 
+                "place": "Le Z\u00e9nith", 
+                "date": "2017-02-22T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -1.890401, 
+                    52.486243
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Birmingham", 
+                "title": "Sum 41", 
+                "country": "United Kingdom", 
+                "artist": "Sum 41", 
+                "place": "O2 Academy Birmingham", 
+                "date": "2017-02-24T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -2.2426305, 
+                    53.4807593
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Manchester", 
+                "title": "Sum 41", 
+                "country": "United Kingdom", 
+                "artist": "Sum 41", 
+                "place": "Manchester Academy", 
+                "date": "2017-02-25T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -1.5490774, 
+                    53.8007554
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Leeds", 
+                "title": "Sum 41", 
+                "country": "United Kingdom", 
+                "artist": "Sum 41", 
+                "place": "O2 Academy", 
+                "date": "2017-02-26T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -4.251806, 
+                    55.864237
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Glasgow", 
+                "title": "Sum 41", 
+                "country": "United Kingdom", 
+                "artist": "Sum 41", 
+                "place": "Barrowlands", 
+                "date": "2017-02-28T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -0.1277583, 
+                    51.5073509
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "London", 
+                "title": "Sum 41", 
+                "country": "United Kingdom", 
+                "artist": "Sum 41", 
+                "place": "The Hippodrome Kingston", 
+                "date": "2017-03-01T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -0.1277583, 
+                    51.5073509
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "London", 
+                "title": "Sum 41", 
+                "country": "United Kingdom", 
+                "artist": "Sum 41", 
+                "place": "O2 Academy Brixton", 
+                "date": "2017-03-02T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -2.58791, 
+                    51.454513
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Bristol", 
+                "title": "Sum 41", 
+                "country": "United Kingdom", 
+                "artist": "Sum 41", 
+                "place": "O2 Academy Bristol", 
+                "date": "2017-03-03T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -1.1581086, 
+                    52.9547832
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Nottingham", 
+                "title": "Sum 41", 
+                "country": "United Kingdom", 
+                "artist": "Sum 41", 
+                "place": "Rock City", 
+                "date": "2017-03-04T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -1.4043509, 
+                    50.9097004
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Southampton", 
+                "title": "Sum 41", 
+                "country": "United Kingdom", 
+                "artist": "Sum 41", 
+                "place": "O2 Guildhall Southampton", 
+                "date": "2017-03-06T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    4.3517103, 
+                    50.8503396
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Brussels", 
+                "title": "Sum 41", 
+                "country": "Belgium", 
+                "artist": "Sum 41", 
+                "place": "Ancienne Belgique", 
+                "date": "2017-03-08T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    5.9860925, 
+                    49.5008805
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Esch-sur-Alzette", 
+                "title": "Sum 41", 
+                "country": "Luxembourg", 
+                "artist": "Sum 41", 
+                "place": "Rockhal", 
+                "date": "2017-03-09T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    5.0919143, 
+                    51.560596
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Tilburg", 
+                "title": "Sum 41", 
+                "country": "Netherlands", 
+                "artist": "Sum 41", 
+                "place": "013", 
+                "date": "2017-03-10T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    3.0733845, 
+                    50.6457116
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Euralille", 
+                "title": "Sum 41", 
+                "country": "France", 
+                "artist": "Sum 41", 
+                "place": "L'A\u00e9ronef", 
+                "date": "2017-03-12T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    9.9936818, 
+                    53.5510846
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Hamburg", 
+                "title": "Sum 41", 
+                "country": "Germany", 
+                "artist": "Sum 41", 
+                "place": "Grosse Freiheit 36", 
+                "date": "2017-03-13T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    18.0685808, 
+                    59.3293235
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Stockholm", 
+                "title": "Sum 41", 
+                "country": "Sweden", 
+                "artist": "Sum 41", 
+                "place": "Arenan/Fryshuset", 
+                "date": "2017-03-15T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    24.938379, 
+                    60.1698557
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Helsinki", 
+                "title": "Sum 41", 
+                "country": "Finland", 
+                "artist": "Sum 41", 
+                "place": "Tavastia", 
+                "date": "2017-03-17T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }, 
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -2.9349852, 
+                    43.2630126
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Bilbao", 
+                "title": "Sum 41 @ Santana 27 (Bilbao)", 
+                "country": "Spain", 
+                "artist": "Sum 41", 
+                "place": "Santana 27", 
+                "date": "2017-01-21T00:00:00", 
+                "lineup": [
+                    "Sum 41"
+                ]
+            }
+        }
+    ]
+}

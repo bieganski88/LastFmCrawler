@@ -9,12 +9,6 @@ import band
 import crawlerMain
 import geocoder
 
-# wartosci stale
-APIKEY = "" # klucz do google maps api - geocode
-SRCFILE = "./json/events.json" # lokalizacja events.json
-DESTPATH = "./sqlite" # gdzie zapisac dane wynikowe
-DJANGO_DB = "D:\Cloud\Dropbox\IT\python\django\eventsMap\eventsMap" # sciezka do bazy danych SQLite aplikacji django [do wyswietlania danych]
-
 
 def example1():
     '''
