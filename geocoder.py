@@ -33,9 +33,10 @@ class Geocoder:
         self._django = DJANGO_DB
         self.data = []
         self.results = []
+        print 'Inicjalizacja rozpoczeta..'
         self._valid = False
         if self.validate() is True:
-            print "\nInicjalizacja zakonczona powodzeniem."
+            print "Inicjalizacja zakonczona powodzeniem.\n"
             self._valid = True
             self.data = self.loadData()
 
@@ -190,7 +191,7 @@ class Geocoder:
             LATITUDE REAL NOT NULL,
             LONGITUDE REAL NOT NULL
             );''')
-        print "Baza danych eventsGeom.db utworzona pomyslnie."
+        print "Baza danych eventsGeom.db na dane wynikowe zostala utworzona pomyslnie."
         conn.close()
 
 

@@ -109,10 +109,12 @@ class LastFmUser:
         self.artists = wykonawcy
 
 
-    def get_concertList(self):
+    def get_concertList(self, limit = 1):
         '''
         Dla ulubionych artystow pobiera informacje o koncertach.
         Jesli brak artystow - nie robi nic.
+        parametr "limit" - jaka czesc dostepnych atrystow ma zostac przeanalizowana.
+        1 - calosc, 0 - nikt, 0.1 - 10% itd
         '''
         # jesli brak artystow
         if self.artists == []:
@@ -121,56 +123,72 @@ class LastFmUser:
 
         # pobiera liste koncertow - iteruje po wykonawcach
         concerts = []
+
+        # ilu artystow przeszukac
+        if limit <= 0:
+            ilosc = 0
+        elif limit >= 1:
+            ilosc = len(self.artists)
+        else:
+            ilosc = int(len(self.artists)*limit)
+        
+        iterator = 0
         for row in self.artists:
-            try:
-                band_name = row[0]
-                band_object = band.BandFm(band_name)
-                band_object.get_events()
-                if len(band_object.events) > 0:
-                    for element in band_object.events:
-                        concerts.append(element)
-            except:
-                print 'Cos poszlo nie tak dla zespolu >> {}'.format(band_name)
+            if iterator >= ilosc:
+                break
+            else:
+                try:
+                    band_name = row[0]
+                    band_object = band.BandFm(band_name)
+                    band_object.get_events()
+                    if len(band_object.events) > 0:
+                        for element in band_object.events:
+                            concerts.append(element)
+                except:
+                    print 'Cos poszlo nie tak dla zespolu >> {}'.format(band_name)
+            iterator += 1
 
         self.concertList = concerts
 
 
-    def to_json(self):
+    def to_json(self, folder = 'json'):
         '''
         Zrzuca scroble, artystow oraz koncerty do jsona.
         '''
         # przesluchane utwory -lista
-        with open('json/scrobbles.json', 'w') as outfile:
+        with open('{}/scrobbles.json'.format(folder), 'w') as outfile:
             json.dump(self.scrobbles, outfile, indent=4)
         # przesluchane utwory - slownik
         scrobble_keys = ['artist', 'title', 'date']
         scrobbles_with_keys = []
         for scrobble in self.scrobbles:
             scrobbles_with_keys.append(dict(zip(scrobble_keys, scrobble)))
-        with open('json/scrobblesDict.json', 'w') as outfile:
+        with open('{}/scrobblesDict.json'.format(folder), 'w') as outfile:
             json.dump(scrobbles_with_keys, outfile, indent=4)
         
         # ulubieni wykonawcy - lista
-        with open('json/artists.json', 'w') as outfile:
+        with open('{}/artists.json'.format(folder), 'w') as outfile:
             json.dump(self.artists, outfile, indent=4)
         # ulubieni wykonawcy - slownik
         artist_keys = ['artist', 'url', 'scrobbles']
         artists_with_keys = []
         for artist in self.artists:
             artists_with_keys.append(dict(zip(artist_keys, artist)))
-        with open('json/artistsDict.json', 'w') as outfile:
+        with open('{}/artistsDict.json'.format(folder), 'w') as outfile:
             json.dump(artists_with_keys, outfile, indent=4)
 
         # koncerty - lista
-        with open('json/events.json', 'w') as outfile:
+        with open('{}/events.json'.format(folder), 'w') as outfile:
             json.dump(self.concertList, outfile, indent=4)
         # koncerty - dict
         event_keys = ['artist', 'title', 'date', 'lineup', 'place', 'city', 'country']
         events_with_keys = []
         for event in self.concertList:
             events_with_keys.append(dict(zip(event_keys, event)))
-        with open('json/eventsDict.json', 'w') as outfile:
+        with open('{}/eventsDict.json'.format(folder), 'w') as outfile:
             json.dump(events_with_keys, outfile, indent=4)
+        
+        print "Zapisano do formatu JSON w lokalizacji ./{}".format(folder)
 
 
     # pobieranie danych dotyczacych scrobbli

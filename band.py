@@ -6,6 +6,7 @@ Created on Tue Jul 26 07:35:55 2016
 """
 import urllib
 import itertools
+import json
 from BeautifulSoup import *
 
 
@@ -18,7 +19,7 @@ class BandFm:
     def __init__(self, band_name, info = 0):
         '''
         Band name musi byc z '+' zamiast spacji.
-        Zeby byl lekkostrawny dla
+        Zeby byl lekkostrawny dla przetwarzania jako url.
         '''
         self._name = band_name
         self._base_url = 'http://www.last.fm/music/{}'.format(self._name)
@@ -97,6 +98,7 @@ class BandFm:
         when = soup.findAll("td", {"class" : "events-list-item-art"})
         who = soup.findAll("td", {"class" : "events-list-item-event"})
         where = soup.findAll("td", {"class" : "events-list-item-venue"})
+        
 
         events = []
 
@@ -110,7 +112,10 @@ class BandFm:
                 event.append(when[index].time["datetime"])
                 # lineup
                 lineup = self.clean_lineup(who[index].findAll("div", {"class" : "events-list-item-event--lineup"})[0].text)
-                event.append(lineup)
+                if event[0] not in lineup:
+                    lineup.reverse() # aby dodac na poczatku listy
+                    lineup.append(event[0])
+                event.append(lineup[::-1])
                 # nazwa miejscowki
                 event.append(where[index].div.text)
                 # miasto
@@ -147,6 +152,20 @@ class BandFm:
         tags = sekcja[0].findAll("a")
 
         self.tags = [tag.text for tag in tags]
+        
+    
+    def to_json(self, folder = 'json'):
+        '''
+        Zrzuca koncerty oraz tagi do pliku json.
+        '''
+        # koncerty -lista
+        with open('{}/events.json'.format(folder), 'w') as outfile:
+            json.dump(self.events, outfile, indent=4)
+        # tagi -lista
+        with open('{}/tagi.json'.format(folder), 'w') as outfile:
+            json.dump(self.tags, outfile, indent=4)
+        print "Zapisano jako json w lokalizacji: {}".format(folder)
+            
 
 
     # FUNKCJE POMOCNICZE
@@ -172,7 +191,9 @@ class BandFm:
             return [self._name.replace('+', ' ')]
 
         # gdy jest kilku
+        lineup = lineup.encode('ascii','replace')
         artists = str(lineup).replace('\n', '').split(',')
+            
         list_lineup = [x.lstrip() for x in artists]
 
         return list_lineup
