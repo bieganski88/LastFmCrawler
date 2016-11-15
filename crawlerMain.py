@@ -84,9 +84,31 @@ class LastFmUser:
             przesluchane += self.looking4music(link)
             print u'Przetwazanie strony: {} - OK'.format(link)
         self.scrobbles = przesluchane
+    
+    
+    def get_artists_recent(self, *args):
+        '''
+        Selekcja wykonawcow, ale bazujac na ostatnio sluchanych.
+        Przewidziane wartosci dla *args = '7', '30', '90', '180', '365'
+        '''
+        presets = { '7' : '?date_preset=LAST_7_DAYS', '30' : '?date_preset=LAST_30_DAYS',
+                   '90' : '?date_preset=LAST_90_DAYS', '180' : '?date_preset=LAST_180_DAYS',
+                   '365' : '?date_preset=LAST_365_DAYS'}
+        
+        preset_used = []
+        
+        for argument in args:
+            if argument in presets.keys():
+                preset_used.append(presets[argument])
+        
+        # generuje linki dla stron do sprawdzenia
+        url = u'http://www.last.fm/user/{}/library/artists'.format(self._username)
+        linki = [u'{}{}'.format(url, x) for x in preset_used]
+        
+        self.artist_iterator(linki)
+        
 
-
-    def get_artists(self, start_page, end_page):
+    def get_artists_all_time(self, start_page, end_page):
         '''
         Pobiera informacje o ulubionych artystach z zdanej ilosci stron.
         '''
@@ -100,13 +122,8 @@ class LastFmUser:
         # generuje linki dla stron do sprawdzenia
         url = u'http://www.last.fm/user/{}/library/artists'.format(self._username)
         linki = [u'{}?page={}'.format(url, x) for x in range(start_page, end_page+1)]
-
-        # ekstrakcja playlisty
-        wykonawcy = []
-        for link in linki:
-            wykonawcy += self.looking4artist(link)
-            print u'Przetwazanie strony: {} - OK'.format(link)
-        self.artists = wykonawcy
+        
+        self.artist_iterator(linki)
 
 
     def get_concertList(self, limit = 1):
@@ -141,6 +158,7 @@ class LastFmUser:
                     band_name = row[0]
                     band_object = band.BandFm(band_name)
                     band_object.get_events()
+                    print '>> {} koncertow'.format(len(band_object.events))
                     if len(band_object.events) > 0:
                         for element in band_object.events:
                             concerts.append(element)
@@ -226,7 +244,22 @@ class LastFmUser:
             przesluchane = []
 
         return przesluchane 
-
+    
+    
+    # iteruje po wskazanych stronach i pobiera informacje o artystach
+    def artist_iterator(self, linki):
+        '''
+        Argument wejsciowy - lista linkow url do sprawdzenia.
+        Dla kazdego z nich wywoluje metode looking4artist.
+        '''
+        # ekstrakcja playlisty
+        wykonawcy = []
+        for link in linki:
+            wykonawcy += self.looking4artist(link)
+            print u'Przetwazanie strony: {} - OK'.format(link)
+        self.artists = wykonawcy
+        
+        
 
     # pobieranie danych dotyczacych wykonawcow
     def looking4artist(self, url):
@@ -237,13 +270,19 @@ class LastFmUser:
         soup = self.makeSoup(url)
         raw_info = soup.findAll("a", {"class" : "countbar-bar-value"})
         page, name, count = [], [], []
+        presets = ['?date_preset=LAST_7_DAYS', '?date_preset=LAST_30_DAYS',
+           '?date_preset=LAST_90_DAYS', '?date_preset=LAST_180_DAYS',
+           '?date_preset=LAST_365_DAYS']
 
         for paragraph in raw_info:
             href = paragraph['href']
             prefix = '/user/{}/library/music/'.format(self._username)
 
             # nazwa zespolu
-            name.append(href.replace(prefix, ''))
+            href = href.replace(prefix, '')
+            for preset in presets:
+                href = href.replace(preset, '')
+            name.append(href)
 
             # strona profilu na last fm
             page.append('http://www.last.fm/music/{}'.format(name[-1]))

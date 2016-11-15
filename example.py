@@ -56,7 +56,7 @@ def example2():
     # sciezka do folderu z baza danych SQLite aplikacji django [do wyswietlania danych]
     # aplikacje zawiera repo DjangoApp4LastFmCrawler z mojego githuba
     # dostepne pod adresem https://github.com/bieganski88/DjangoApp4LastFmCrawler
-    DJANGO_DB = ""
+    DJANGO_DB = "D:\Cloud\Dropbox\IT\python\django\eventsMap\eventsMap"
     
     # instancjonowanie klasy
     geokodowanie = geocoder.Geocoder(APIKEY, SRCFILE, DESTPATH, DJANGO_DB)
@@ -106,7 +106,7 @@ def example3():
     # pobieranie moze nastapic od dowolnej strony
     # im mniejszy index trony tym popularniejsi artysci
     print "Analiza biblioteki wykonawcow.."
-    user.get_artists(1,1) # pobiera jedna strone - 50 najczesciej sluchanych artystow
+    user.get_artists_all_time(1,1) # pobiera jedna strone - 50 najczesciej sluchanych artystow
     
     # wyswietlam kilka przykladowych rekordow dotyczacych artystow
     print "Kilka przykladowych rekordow z sluchanymi artystami"
@@ -128,7 +128,7 @@ def example3():
     APIKEY = ""
     SRCFILE = "./example/example3/events.json" # dane wyeksportowane z example1
     DESTPATH = "./example/example3/geo" # gdzie zapisac dane wynikowe
-    DJANGO_DB = ""
+    DJANGO_DB = "D:\Cloud\Dropbox\IT\python\django\eventsMap\eventsMap"
     
     # instancjonowanie klasy
     geokodowanie = geocoder.Geocoder(APIKEY, SRCFILE, DESTPATH, DJANGO_DB)
@@ -139,6 +139,41 @@ def example3():
     
     # export danych do bazy danych wynikowej
     geokodowanie.exportToDB()
+    
+    # export danych do bazy danych django w celu wyswietlenia wynikow
+    geokodowanie.exportToDjango()
+
+
+def example4():
+    '''
+    Przyklad analogiczny do poprzedniego, rowniez bazowac bedziemy na koncie
+    uzytkownika 'Biegan'. Tym razem artystow nie bedziemy pobierac bazujac na
+    aktualnych preferencjach uzytkownika. Czyli najpopulatniejszych z ostatnich 30 dni.
+    get_artist_recent() - przyjmuje poza tym wartosci: 7, 90, 180 oraz 365.
+    '''
+    user= crawlerMain.LastFmUser('Biegan')
+    str(user)
+    
+    print "Wyszukiwanie najpopularniejszych artystow z ostatnich 30 dni.."
+    user.get_artists_recent('90')
+    print "Odnaleziono {} artystow".format(len(user.artists))
+    
+    print "Pobieranie informacji o koncertach.."
+    user.get_concertList(0.2)
+    
+    user.to_json('example/example4')
+    
+    APIKEY = ""
+    SRCFILE = "./example/example4/events.json" # dane wyeksportowane z example1
+    DESTPATH = "./example/example4/geo" # gdzie zapisac dane wynikowe
+    DJANGO_DB = "D:\Cloud\Dropbox\IT\python\django\eventsMap\eventsMap"
+    
+        # instancjonowanie klasy
+    geokodowanie = geocoder.Geocoder(APIKEY, SRCFILE, DESTPATH, DJANGO_DB)
+    geokodowanie.process()
+    
+    # export odbywa sie zarowno do formatu json jak i geojson
+    geokodowanie.exportToJSON()
     
     # export danych do bazy danych django w celu wyswietlenia wynikow
     geokodowanie.exportToDjango()

@@ -1,0 +1,718 @@
+[
+    {
+        "city": "Boston", 
+        "title": "Basement", 
+        "country": "United States", 
+        "artist": "Citizen", 
+        "place": "Royale Boston", 
+        "date": "2016-12-13T00:00:00", 
+        "lineup": [
+            "Turnover", 
+            "Citizen"
+        ]
+    }, 
+    {
+        "city": "Rochester", 
+        "title": "Citizen", 
+        "country": "United States", 
+        "artist": "Citizen", 
+        "place": "Montage Live Music Hall", 
+        "date": "2016-12-15T00:00:00", 
+        "lineup": [
+            "Safe To Say", 
+            "Citizen"
+        ]
+    }, 
+    {
+        "city": "Ottowa", 
+        "title": "Citizen, Safe To Say, Maritime Bleach - Friday Dec 16 at Zaphods", 
+        "country": "Canada", 
+        "artist": "Citizen", 
+        "place": "Zaphod Beeblebrox", 
+        "date": "2016-12-16T00:00:00", 
+        "lineup": [
+            "Safe To Say", 
+            "Maritime Bleach", 
+            "Citizen"
+        ]
+    }, 
+    {
+        "city": "New York", 
+        "title": "Something In The Way", 
+        "country": "United States", 
+        "artist": "Citizen", 
+        "place": "Webster Hall", 
+        "date": "2016-12-14T00:00:00", 
+        "lineup": [
+            "Nicole Dollanganger", 
+            "Modern Baseball", 
+            "mewithoutYou", 
+            "Elvis Depressedly", 
+            "Crying", 
+            "Citizen", 
+            "Basement", 
+            "Alex G"
+        ]
+    }, 
+    {
+        "city": "Stockholm", 
+        "title": "Bring Me The Horizon", 
+        "country": "Sweden", 
+        "artist": "Bring Me the Horizon", 
+        "place": "Hovet", 
+        "date": "2016-11-25T00:00:00", 
+        "lineup": [
+            "While She Sleeps", 
+            "Basement", 
+            "Bring Me the Horizon"
+        ]
+    }, 
+    {
+        "city": "Frankfurt", 
+        "title": "Bring Me the Horizon", 
+        "country": "Germany", 
+        "artist": "Bring Me the Horizon", 
+        "place": "Jahrhunderthalle", 
+        "date": "2016-11-15T00:00:00", 
+        "lineup": [
+            "Bring Me the Horizon", 
+            "Basement", 
+            "While She Sleeps"
+        ]
+    }, 
+    {
+        "city": "Hamburg", 
+        "title": "Bring Me the Horizon", 
+        "country": "Germany", 
+        "artist": "Bring Me the Horizon", 
+        "place": "Alsterdorfer Sporthalle", 
+        "date": "2016-11-16T00:00:00", 
+        "lineup": [
+            "Bring Me the Horizon"
+        ]
+    }, 
+    {
+        "city": "Bochum", 
+        "title": "Bring Me the Horizon", 
+        "country": "Germany", 
+        "artist": "Bring Me the Horizon", 
+        "place": "Ruhrcongress", 
+        "date": "2016-11-17T00:00:00", 
+        "lineup": [
+            "Bring Me the Horizon", 
+            "Basement", 
+            "While She Sleeps"
+        ]
+    }, 
+    {
+        "city": "Berlin", 
+        "title": "Bring Me the Horizon", 
+        "country": "Germany", 
+        "artist": "Bring Me the Horizon", 
+        "place": "Columbiahalle", 
+        "date": "2016-11-18T00:00:00", 
+        "lineup": [
+            "Bring Me the Horizon", 
+            "Basement", 
+            "While She Sleeps"
+        ]
+    }, 
+    {
+        "city": "Frederiksberg", 
+        "title": "Bring Me the Horizon", 
+        "country": "Denmark", 
+        "artist": "Bring Me the Horizon", 
+        "place": "Falconer Salen", 
+        "date": "2016-11-20T00:00:00", 
+        "lineup": [
+            "Bring Me the Horizon", 
+            "Basement", 
+            "While She Sleeps"
+        ]
+    }, 
+    {
+        "city": "Helsinki", 
+        "title": "Bring Me the Horizon", 
+        "country": "Finland", 
+        "artist": "Bring Me the Horizon", 
+        "place": "J\u00e4halli (Helsinki Icehall)", 
+        "date": "2016-11-22T00:00:00", 
+        "lineup": [
+            "Bring Me the Horizon"
+        ]
+    }, 
+    {
+        "city": "Helsinki", 
+        "title": "Bring Me the Horizon", 
+        "country": "Finland", 
+        "artist": "Bring Me the Horizon", 
+        "place": "J\u00e4\u00e4halli", 
+        "date": "2016-11-22T00:00:00", 
+        "lineup": [
+            "Bring Me the Horizon", 
+            "Basement", 
+            "While She Sleeps"
+        ]
+    }, 
+    {
+        "city": "Tallinn", 
+        "title": "Bring Me the Horizon", 
+        "country": "Estonia", 
+        "artist": "Bring Me the Horizon", 
+        "place": "Saku Suurhall", 
+        "date": "2016-11-23T00:00:00", 
+        "lineup": [
+            "While She Sleeps", 
+            "Basement", 
+            "Bring Me the Horizon"
+        ]
+    }, 
+    {
+        "city": "Stockholm", 
+        "title": "Bring Me the Horizon", 
+        "country": "Sweden", 
+        "artist": "Bring Me the Horizon", 
+        "place": "Hovet", 
+        "date": "2016-11-25T00:00:00", 
+        "lineup": [
+            "Bring Me the Horizon", 
+            "Basement", 
+            "While She Sleeps"
+        ]
+    }, 
+    {
+        "city": "Oslo", 
+        "title": "Bring Me the Horizon", 
+        "country": "Norway", 
+        "artist": "Bring Me the Horizon", 
+        "place": "Sentrum Scene", 
+        "date": "2016-11-26T00:00:00", 
+        "lineup": [
+            "Bring Me the Horizon", 
+            "Basement", 
+            "While She Sleeps"
+        ]
+    }, 
+    {
+        "city": "Melbourne", 
+        "title": "Bring Me the Horizon", 
+        "country": "Australia", 
+        "artist": "Bring Me the Horizon", 
+        "place": "Margaret Court Arena", 
+        "date": "2017-02-05T00:00:00", 
+        "lineup": [
+            "Bring Me the Horizon"
+        ]
+    }, 
+    {
+        "city": "Melbourne", 
+        "title": "Bring Me the Horizon", 
+        "country": "Australia", 
+        "artist": "Bring Me the Horizon", 
+        "place": "Margaret Court Arena", 
+        "date": "2017-02-06T00:00:00", 
+        "lineup": [
+            "Bring Me the Horizon"
+        ]
+    }, 
+    {
+        "city": "Houston", 
+        "title": "Bring Me the Horizon", 
+        "country": "United States", 
+        "artist": "Bring Me the Horizon", 
+        "place": "Bayou Music Center", 
+        "date": "2017-03-10T00:00:00", 
+        "lineup": [
+            "Bring Me the Horizon", 
+            "Beartooth", 
+            "Underoath"
+        ]
+    }, 
+    {
+        "city": "Dallas", 
+        "title": "Bring Me the Horizon", 
+        "country": "United States", 
+        "artist": "Bring Me the Horizon", 
+        "place": "South Side Ballroom", 
+        "date": "2017-03-11T00:00:00", 
+        "lineup": [
+            "Bring Me the Horizon", 
+            "Beartooth", 
+            "Underoath"
+        ]
+    }, 
+    {
+        "city": "", 
+        "title": "Bring Me the Horizon", 
+        "country": "United States", 
+        "artist": "Bring Me the Horizon", 
+        "place": "The Aragon Ballroom", 
+        "date": "2017-03-13T00:00:00", 
+        "lineup": [
+            "Bring Me the Horizon", 
+            "Beartooth", 
+            "Underoath"
+        ]
+    }, 
+    {
+        "city": "Detroit", 
+        "title": "Bring Me the Horizon", 
+        "country": "United States", 
+        "artist": "Bring Me the Horizon", 
+        "place": "Masonic Temple", 
+        "date": "2017-03-14T00:00:00", 
+        "lineup": [
+            "Bring Me the Horizon", 
+            "Beartooth", 
+            "Underoath"
+        ]
+    }, 
+    {
+        "city": "Toronto", 
+        "title": "Bring Me the Horizon", 
+        "country": "Canada", 
+        "artist": "Bring Me the Horizon", 
+        "place": "Ricoh Coliseum", 
+        "date": "2017-03-15T00:00:00", 
+        "lineup": [
+            "Bring Me the Horizon", 
+            "Beartooth", 
+            "Underoath"
+        ]
+    }, 
+    {
+        "city": "Montr\u00e9al", 
+        "title": "Bring Me the Horizon", 
+        "country": "Canada", 
+        "artist": "Bring Me the Horizon", 
+        "place": "Stade Uniprix", 
+        "date": "2017-03-17T00:00:00", 
+        "lineup": [
+            "Bring Me the Horizon", 
+            "Beartooth", 
+            "Underoath"
+        ]
+    }, 
+    {
+        "city": "Lowell, MA", 
+        "title": "Bring Me the Horizon", 
+        "country": "United States", 
+        "artist": "Bring Me the Horizon", 
+        "place": "Tsongas Center at UMass Lowell", 
+        "date": "2017-03-18T00:00:00", 
+        "lineup": [
+            "Bring Me the Horizon", 
+            "Beartooth", 
+            "Underoath"
+        ]
+    }, 
+    {
+        "city": "New York", 
+        "title": "Bring Me the Horizon", 
+        "country": "United States", 
+        "artist": "Bring Me the Horizon", 
+        "place": "Terminal 5", 
+        "date": "2017-03-20T00:00:00", 
+        "lineup": [
+            "Bring Me the Horizon", 
+            "Beartooth", 
+            "Underoath"
+        ]
+    }, 
+    {
+        "city": "Philadelphia", 
+        "title": "Bring Me the Horizon", 
+        "country": "United States", 
+        "artist": "Bring Me the Horizon", 
+        "place": "The Liacouras Center", 
+        "date": "2017-03-22T00:00:00", 
+        "lineup": [
+            "Bring Me the Horizon", 
+            "Beartooth", 
+            "Underoath"
+        ]
+    }, 
+    {
+        "city": "Atlanta", 
+        "title": "Bring Me the Horizon", 
+        "country": "United States", 
+        "artist": "Bring Me the Horizon", 
+        "place": "Tabernacle", 
+        "date": "2017-03-24T00:00:00", 
+        "lineup": [
+            "Bring Me the Horizon", 
+            "Beartooth", 
+            "Underoath"
+        ]
+    }, 
+    {
+        "city": "St Louis", 
+        "title": "Bring Me the Horizon", 
+        "country": "United States", 
+        "artist": "Bring Me the Horizon", 
+        "place": "The Pageant", 
+        "date": "2017-03-27T00:00:00", 
+        "lineup": [
+            "Bring Me the Horizon", 
+            "Beartooth", 
+            "Underoath"
+        ]
+    }, 
+    {
+        "city": "Kansas City, MO", 
+        "title": "Bring Me the Horizon", 
+        "country": "United States", 
+        "artist": "Bring Me the Horizon", 
+        "place": "Arvest Bank Theatre at the Midland", 
+        "date": "2017-03-28T00:00:00", 
+        "lineup": [
+            "Bring Me the Horizon", 
+            "Beartooth", 
+            "Underoath"
+        ]
+    }, 
+    {
+        "city": "Broomfield, CO", 
+        "title": "Bring Me the Horizon", 
+        "country": "United States", 
+        "artist": "Bring Me the Horizon", 
+        "place": "1STBANK Center", 
+        "date": "2017-03-29T00:00:00", 
+        "lineup": [
+            "Bring Me the Horizon", 
+            "Beartooth", 
+            "Underoath"
+        ]
+    }, 
+    {
+        "city": "Seattle", 
+        "title": "Bring Me the Horizon", 
+        "country": "United States", 
+        "artist": "Bring Me the Horizon", 
+        "place": "WaMu Theater", 
+        "date": "2017-04-01T00:00:00", 
+        "lineup": [
+            "Bring Me the Horizon", 
+            "Beartooth", 
+            "Underoath"
+        ]
+    }, 
+    {
+        "city": "San Francisco", 
+        "title": "Bring Me the Horizon", 
+        "country": "United States", 
+        "artist": "Bring Me the Horizon", 
+        "place": "The Warfield", 
+        "date": "2017-04-03T00:00:00", 
+        "lineup": [
+            "Bring Me the Horizon", 
+            "Beartooth", 
+            "Underoath"
+        ]
+    }, 
+    {
+        "city": "Los Angeles", 
+        "title": "Bring Me the Horizon", 
+        "country": "United States", 
+        "artist": "Bring Me the Horizon", 
+        "place": "Shrine Expo Hall", 
+        "date": "2017-04-06T00:00:00", 
+        "lineup": [
+            "Bring Me the Horizon", 
+            "Beartooth", 
+            "Underoath"
+        ]
+    }, 
+    {
+        "city": "Phoenix", 
+        "title": "Bring Me the Horizon", 
+        "country": "United States", 
+        "artist": "Bring Me the Horizon", 
+        "place": "Comerica Theatre", 
+        "date": "2017-04-07T00:00:00", 
+        "lineup": [
+            "Bring Me the Horizon", 
+            "Beartooth", 
+            "Underoath"
+        ]
+    }, 
+    {
+        "city": "Las Vegas", 
+        "title": "Bring Me the Horizon", 
+        "country": "United States", 
+        "artist": "Bring Me the Horizon", 
+        "place": "The Joint at The Hard Rock Hotel & Casino", 
+        "date": "2017-04-08T00:00:00", 
+        "lineup": [
+            "Bring Me the Horizon", 
+            "Beartooth", 
+            "Underoath"
+        ]
+    }, 
+    {
+        "city": "Nottingham", 
+        "title": "Blink 182", 
+        "country": "United Kingdom", 
+        "artist": "blink-182", 
+        "place": "Capital FM Arena Nottingham", 
+        "date": "2017-07-04T00:00:00", 
+        "lineup": [
+            "blink-182"
+        ]
+    }, 
+    {
+        "city": "Br\u00e9tigny-sur-Orge", 
+        "title": "Download Festival France 2017 @ base a\u00e9rienne 217 (91 Br\u00e9tigny-sur-Orge)", 
+        "country": "France", 
+        "artist": "blink-182", 
+        "place": "Le Rack'Am", 
+        "date": "2017-06-09T00:00:00", 
+        "lineup": [
+            "System of a Down", 
+            "Prophets Of Rage", 
+            "Linkin Park", 
+            "Green Day", 
+            "blink-182"
+        ]
+    }, 
+    {
+        "city": "27383 Schee\u00dfel", 
+        "title": "Hurricane Festival 2017", 
+        "country": "Germany", 
+        "artist": "blink-182", 
+        "place": "Eichenring Schee\u00dfel", 
+        "date": "2017-06-23T00:00:00", 
+        "lineup": [
+            "Erik Cohen", 
+            "Editors", 
+            "DIGITALISM live", 
+            "Die Orsons", 
+            "Casper", 
+            "Boys Noize", 
+            "Boy", 
+            "blink-182"
+        ]
+    }, 
+    {
+        "city": "Oakland", 
+        "title": "Not So Silent Night", 
+        "country": "United States", 
+        "artist": "blink-182", 
+        "place": "Oracle Arena", 
+        "date": "2016-12-09T00:00:00", 
+        "lineup": [
+            "Phantogram", 
+            "Jimmy Eat World", 
+            "Green Day", 
+            "Empire of the Sun", 
+            "Catfish and The Bottlemen", 
+            "blink-182", 
+            "Bastille"
+        ]
+    }, 
+    {
+        "city": "Nickelsdorf", 
+        "title": "Nova Rock 2017", 
+        "country": "Austria", 
+        "artist": "blink-182", 
+        "place": "Pannonia Fields II", 
+        "date": "2017-06-15T00:00:00", 
+        "lineup": [
+            "Danko Jones", 
+            "Broilers", 
+            "blink-182", 
+            "Beginner", 
+            "Avatar", 
+            "Architects", 
+            "Airbourne", 
+            "187 Strassenbande"
+        ]
+    }, 
+    {
+        "city": "Frankfurt", 
+        "title": "blink-182", 
+        "country": "Germany", 
+        "artist": "blink-182", 
+        "place": "Festhalle", 
+        "date": "2017-06-12T00:00:00", 
+        "lineup": [
+            "blink-182"
+        ]
+    }, 
+    {
+        "city": "Oberhausen", 
+        "title": "blink-182", 
+        "country": "Germany", 
+        "artist": "blink-182", 
+        "place": "K\u00f6nig Pilsener Arena", 
+        "date": "2017-06-13T00:00:00", 
+        "lineup": [
+            "blink-182"
+        ]
+    }, 
+    {
+        "city": "Munich", 
+        "title": "blink-182", 
+        "country": "Germany", 
+        "artist": "blink-182", 
+        "place": "Olympiahalle", 
+        "date": "2017-06-16T00:00:00", 
+        "lineup": [
+            "blink-182"
+        ]
+    }, 
+    {
+        "city": "Stockholm", 
+        "title": "blink-182", 
+        "country": "Sweden", 
+        "artist": "blink-182", 
+        "place": "Tivoli Gr\u00f6na Lund", 
+        "date": "2017-06-21T00:00:00", 
+        "lineup": [
+            "blink-182"
+        ]
+    }, 
+    {
+        "city": "Rotterdam", 
+        "title": "blink-182", 
+        "country": "Netherlands", 
+        "artist": "blink-182", 
+        "place": "Ahoy", 
+        "date": "2017-06-26T00:00:00", 
+        "lineup": [
+            "blink-182"
+        ]
+    }, 
+    {
+        "city": "Berlin", 
+        "title": "blink-182", 
+        "country": "Germany", 
+        "artist": "blink-182", 
+        "place": "Max-Schmeling-Halle", 
+        "date": "2017-06-29T00:00:00", 
+        "lineup": [
+            "blink-182"
+        ]
+    }, 
+    {
+        "city": "Cardiff", 
+        "title": "blink-182", 
+        "country": "United Kingdom", 
+        "artist": "blink-182", 
+        "place": "Motorpoint Arena", 
+        "date": "2017-07-03T00:00:00", 
+        "lineup": [
+            "blink-182"
+        ]
+    }, 
+    {
+        "city": "Nottingham", 
+        "title": "blink-182", 
+        "country": "United Kingdom", 
+        "artist": "blink-182", 
+        "place": "Capital FM Arena Nottingham", 
+        "date": "2017-07-04T00:00:00", 
+        "lineup": [
+            "blink-182"
+        ]
+    }, 
+    {
+        "city": "Leeds", 
+        "title": "blink-182", 
+        "country": "United Kingdom", 
+        "artist": "blink-182", 
+        "place": "First Direct Arena", 
+        "date": "2017-07-05T00:00:00", 
+        "lineup": [
+            "blink-182"
+        ]
+    }, 
+    {
+        "city": "Birmingham", 
+        "title": "blink-182", 
+        "country": "United Kingdom", 
+        "artist": "blink-182", 
+        "place": "Barclaycard Arena", 
+        "date": "2017-07-07T00:00:00", 
+        "lineup": [
+            "blink-182"
+        ]
+    }, 
+    {
+        "city": "Newcastle Upon Tyne", 
+        "title": "blink-182", 
+        "country": "United Kingdom", 
+        "artist": "blink-182", 
+        "place": "Metro Radio Arena Newcastle", 
+        "date": "2017-07-09T00:00:00", 
+        "lineup": [
+            "blink-182"
+        ]
+    }, 
+    {
+        "city": "Glasgow", 
+        "title": "blink-182", 
+        "country": "United Kingdom", 
+        "artist": "blink-182", 
+        "place": "The SSE Hydro", 
+        "date": "2017-07-11T00:00:00", 
+        "lineup": [
+            "blink-182"
+        ]
+    }, 
+    {
+        "city": "Manchester", 
+        "title": "blink-182", 
+        "country": "United Kingdom", 
+        "artist": "blink-182", 
+        "place": "Manchester Arena", 
+        "date": "2017-07-14T00:00:00", 
+        "lineup": [
+            "blink-182"
+        ]
+    }, 
+    {
+        "city": "Liverpool Waterfront", 
+        "title": "blink-182", 
+        "country": "United Kingdom", 
+        "artist": "blink-182", 
+        "place": "Echo Arena", 
+        "date": "2017-07-15T00:00:00", 
+        "lineup": [
+            "blink-182"
+        ]
+    }, 
+    {
+        "city": "Bournemouth", 
+        "title": "blink-182", 
+        "country": "United Kingdom", 
+        "artist": "blink-182", 
+        "place": "BOURNEMOUTH INTERNATIONAL CENTRE", 
+        "date": "2017-07-17T00:00:00", 
+        "lineup": [
+            "blink-182"
+        ]
+    }, 
+    {
+        "city": "London", 
+        "title": "blink-182", 
+        "country": "United Kingdom", 
+        "artist": "blink-182", 
+        "place": "O2 Arena", 
+        "date": "2017-07-19T00:00:00", 
+        "lineup": [
+            "blink-182"
+        ]
+    }, 
+    {
+        "city": "London", 
+        "title": "blink-182", 
+        "country": "United Kingdom", 
+        "artist": "blink-182", 
+        "place": "O2 Arena", 
+        "date": "2017-07-20T00:00:00", 
+        "lineup": [
+            "blink-182"
+        ]
+    }
+]

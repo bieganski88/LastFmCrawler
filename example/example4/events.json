@@ -1,0 +1,718 @@
+[
+    [
+        "Citizen", 
+        "Basement", 
+        "2016-12-13T00:00:00", 
+        [
+            "Turnover", 
+            "Citizen"
+        ], 
+        "Royale Boston", 
+        "Boston", 
+        "United States"
+    ], 
+    [
+        "Citizen", 
+        "Citizen", 
+        "2016-12-15T00:00:00", 
+        [
+            "Safe To Say", 
+            "Citizen"
+        ], 
+        "Montage Live Music Hall", 
+        "Rochester", 
+        "United States"
+    ], 
+    [
+        "Citizen", 
+        "Citizen, Safe To Say, Maritime Bleach - Friday Dec 16 at Zaphods", 
+        "2016-12-16T00:00:00", 
+        [
+            "Safe To Say", 
+            "Maritime Bleach", 
+            "Citizen"
+        ], 
+        "Zaphod Beeblebrox", 
+        "Ottowa", 
+        "Canada"
+    ], 
+    [
+        "Citizen", 
+        "Something In The Way", 
+        "2016-12-14T00:00:00", 
+        [
+            "Nicole Dollanganger", 
+            "Modern Baseball", 
+            "mewithoutYou", 
+            "Elvis Depressedly", 
+            "Crying", 
+            "Citizen", 
+            "Basement", 
+            "Alex G"
+        ], 
+        "Webster Hall", 
+        "New York", 
+        "United States"
+    ], 
+    [
+        "Bring Me the Horizon", 
+        "Bring Me The Horizon", 
+        "2016-11-25T00:00:00", 
+        [
+            "While She Sleeps", 
+            "Basement", 
+            "Bring Me the Horizon"
+        ], 
+        "Hovet", 
+        "Stockholm", 
+        "Sweden"
+    ], 
+    [
+        "Bring Me the Horizon", 
+        "Bring Me the Horizon", 
+        "2016-11-15T00:00:00", 
+        [
+            "Bring Me the Horizon", 
+            "Basement", 
+            "While She Sleeps"
+        ], 
+        "Jahrhunderthalle", 
+        "Frankfurt", 
+        "Germany"
+    ], 
+    [
+        "Bring Me the Horizon", 
+        "Bring Me the Horizon", 
+        "2016-11-16T00:00:00", 
+        [
+            "Bring Me the Horizon"
+        ], 
+        "Alsterdorfer Sporthalle", 
+        "Hamburg", 
+        "Germany"
+    ], 
+    [
+        "Bring Me the Horizon", 
+        "Bring Me the Horizon", 
+        "2016-11-17T00:00:00", 
+        [
+            "Bring Me the Horizon", 
+            "Basement", 
+            "While She Sleeps"
+        ], 
+        "Ruhrcongress", 
+        "Bochum", 
+        "Germany"
+    ], 
+    [
+        "Bring Me the Horizon", 
+        "Bring Me the Horizon", 
+        "2016-11-18T00:00:00", 
+        [
+            "Bring Me the Horizon", 
+            "Basement", 
+            "While She Sleeps"
+        ], 
+        "Columbiahalle", 
+        "Berlin", 
+        "Germany"
+    ], 
+    [
+        "Bring Me the Horizon", 
+        "Bring Me the Horizon", 
+        "2016-11-20T00:00:00", 
+        [
+            "Bring Me the Horizon", 
+            "Basement", 
+            "While She Sleeps"
+        ], 
+        "Falconer Salen", 
+        "Frederiksberg", 
+        "Denmark"
+    ], 
+    [
+        "Bring Me the Horizon", 
+        "Bring Me the Horizon", 
+        "2016-11-22T00:00:00", 
+        [
+            "Bring Me the Horizon"
+        ], 
+        "J\u00e4halli (Helsinki Icehall)", 
+        "Helsinki", 
+        "Finland"
+    ], 
+    [
+        "Bring Me the Horizon", 
+        "Bring Me the Horizon", 
+        "2016-11-22T00:00:00", 
+        [
+            "Bring Me the Horizon", 
+            "Basement", 
+            "While She Sleeps"
+        ], 
+        "J\u00e4\u00e4halli", 
+        "Helsinki", 
+        "Finland"
+    ], 
+    [
+        "Bring Me the Horizon", 
+        "Bring Me the Horizon", 
+        "2016-11-23T00:00:00", 
+        [
+            "While She Sleeps", 
+            "Basement", 
+            "Bring Me the Horizon"
+        ], 
+        "Saku Suurhall", 
+        "Tallinn", 
+        "Estonia"
+    ], 
+    [
+        "Bring Me the Horizon", 
+        "Bring Me the Horizon", 
+        "2016-11-25T00:00:00", 
+        [
+            "Bring Me the Horizon", 
+            "Basement", 
+            "While She Sleeps"
+        ], 
+        "Hovet", 
+        "Stockholm", 
+        "Sweden"
+    ], 
+    [
+        "Bring Me the Horizon", 
+        "Bring Me the Horizon", 
+        "2016-11-26T00:00:00", 
+        [
+            "Bring Me the Horizon", 
+            "Basement", 
+            "While She Sleeps"
+        ], 
+        "Sentrum Scene", 
+        "Oslo", 
+        "Norway"
+    ], 
+    [
+        "Bring Me the Horizon", 
+        "Bring Me the Horizon", 
+        "2017-02-05T00:00:00", 
+        [
+            "Bring Me the Horizon"
+        ], 
+        "Margaret Court Arena", 
+        "Melbourne", 
+        "Australia"
+    ], 
+    [
+        "Bring Me the Horizon", 
+        "Bring Me the Horizon", 
+        "2017-02-06T00:00:00", 
+        [
+            "Bring Me the Horizon"
+        ], 
+        "Margaret Court Arena", 
+        "Melbourne", 
+        "Australia"
+    ], 
+    [
+        "Bring Me the Horizon", 
+        "Bring Me the Horizon", 
+        "2017-03-10T00:00:00", 
+        [
+            "Bring Me the Horizon", 
+            "Beartooth", 
+            "Underoath"
+        ], 
+        "Bayou Music Center", 
+        "Houston", 
+        "United States"
+    ], 
+    [
+        "Bring Me the Horizon", 
+        "Bring Me the Horizon", 
+        "2017-03-11T00:00:00", 
+        [
+            "Bring Me the Horizon", 
+            "Beartooth", 
+            "Underoath"
+        ], 
+        "South Side Ballroom", 
+        "Dallas", 
+        "United States"
+    ], 
+    [
+        "Bring Me the Horizon", 
+        "Bring Me the Horizon", 
+        "2017-03-13T00:00:00", 
+        [
+            "Bring Me the Horizon", 
+            "Beartooth", 
+            "Underoath"
+        ], 
+        "The Aragon Ballroom", 
+        "", 
+        "United States"
+    ], 
+    [
+        "Bring Me the Horizon", 
+        "Bring Me the Horizon", 
+        "2017-03-14T00:00:00", 
+        [
+            "Bring Me the Horizon", 
+            "Beartooth", 
+            "Underoath"
+        ], 
+        "Masonic Temple", 
+        "Detroit", 
+        "United States"
+    ], 
+    [
+        "Bring Me the Horizon", 
+        "Bring Me the Horizon", 
+        "2017-03-15T00:00:00", 
+        [
+            "Bring Me the Horizon", 
+            "Beartooth", 
+            "Underoath"
+        ], 
+        "Ricoh Coliseum", 
+        "Toronto", 
+        "Canada"
+    ], 
+    [
+        "Bring Me the Horizon", 
+        "Bring Me the Horizon", 
+        "2017-03-17T00:00:00", 
+        [
+            "Bring Me the Horizon", 
+            "Beartooth", 
+            "Underoath"
+        ], 
+        "Stade Uniprix", 
+        "Montr\u00e9al", 
+        "Canada"
+    ], 
+    [
+        "Bring Me the Horizon", 
+        "Bring Me the Horizon", 
+        "2017-03-18T00:00:00", 
+        [
+            "Bring Me the Horizon", 
+            "Beartooth", 
+            "Underoath"
+        ], 
+        "Tsongas Center at UMass Lowell", 
+        "Lowell, MA", 
+        "United States"
+    ], 
+    [
+        "Bring Me the Horizon", 
+        "Bring Me the Horizon", 
+        "2017-03-20T00:00:00", 
+        [
+            "Bring Me the Horizon", 
+            "Beartooth", 
+            "Underoath"
+        ], 
+        "Terminal 5", 
+        "New York", 
+        "United States"
+    ], 
+    [
+        "Bring Me the Horizon", 
+        "Bring Me the Horizon", 
+        "2017-03-22T00:00:00", 
+        [
+            "Bring Me the Horizon", 
+            "Beartooth", 
+            "Underoath"
+        ], 
+        "The Liacouras Center", 
+        "Philadelphia", 
+        "United States"
+    ], 
+    [
+        "Bring Me the Horizon", 
+        "Bring Me the Horizon", 
+        "2017-03-24T00:00:00", 
+        [
+            "Bring Me the Horizon", 
+            "Beartooth", 
+            "Underoath"
+        ], 
+        "Tabernacle", 
+        "Atlanta", 
+        "United States"
+    ], 
+    [
+        "Bring Me the Horizon", 
+        "Bring Me the Horizon", 
+        "2017-03-27T00:00:00", 
+        [
+            "Bring Me the Horizon", 
+            "Beartooth", 
+            "Underoath"
+        ], 
+        "The Pageant", 
+        "St Louis", 
+        "United States"
+    ], 
+    [
+        "Bring Me the Horizon", 
+        "Bring Me the Horizon", 
+        "2017-03-28T00:00:00", 
+        [
+            "Bring Me the Horizon", 
+            "Beartooth", 
+            "Underoath"
+        ], 
+        "Arvest Bank Theatre at the Midland", 
+        "Kansas City, MO", 
+        "United States"
+    ], 
+    [
+        "Bring Me the Horizon", 
+        "Bring Me the Horizon", 
+        "2017-03-29T00:00:00", 
+        [
+            "Bring Me the Horizon", 
+            "Beartooth", 
+            "Underoath"
+        ], 
+        "1STBANK Center", 
+        "Broomfield, CO", 
+        "United States"
+    ], 
+    [
+        "Bring Me the Horizon", 
+        "Bring Me the Horizon", 
+        "2017-04-01T00:00:00", 
+        [
+            "Bring Me the Horizon", 
+            "Beartooth", 
+            "Underoath"
+        ], 
+        "WaMu Theater", 
+        "Seattle", 
+        "United States"
+    ], 
+    [
+        "Bring Me the Horizon", 
+        "Bring Me the Horizon", 
+        "2017-04-03T00:00:00", 
+        [
+            "Bring Me the Horizon", 
+            "Beartooth", 
+            "Underoath"
+        ], 
+        "The Warfield", 
+        "San Francisco", 
+        "United States"
+    ], 
+    [
+        "Bring Me the Horizon", 
+        "Bring Me the Horizon", 
+        "2017-04-06T00:00:00", 
+        [
+            "Bring Me the Horizon", 
+            "Beartooth", 
+            "Underoath"
+        ], 
+        "Shrine Expo Hall", 
+        "Los Angeles", 
+        "United States"
+    ], 
+    [
+        "Bring Me the Horizon", 
+        "Bring Me the Horizon", 
+        "2017-04-07T00:00:00", 
+        [
+            "Bring Me the Horizon", 
+            "Beartooth", 
+            "Underoath"
+        ], 
+        "Comerica Theatre", 
+        "Phoenix", 
+        "United States"
+    ], 
+    [
+        "Bring Me the Horizon", 
+        "Bring Me the Horizon", 
+        "2017-04-08T00:00:00", 
+        [
+            "Bring Me the Horizon", 
+            "Beartooth", 
+            "Underoath"
+        ], 
+        "The Joint at The Hard Rock Hotel & Casino", 
+        "Las Vegas", 
+        "United States"
+    ], 
+    [
+        "blink-182", 
+        "Blink 182", 
+        "2017-07-04T00:00:00", 
+        [
+            "blink-182"
+        ], 
+        "Capital FM Arena Nottingham", 
+        "Nottingham", 
+        "United Kingdom"
+    ], 
+    [
+        "blink-182", 
+        "Download Festival France 2017 @ base a\u00e9rienne 217 (91 Br\u00e9tigny-sur-Orge)", 
+        "2017-06-09T00:00:00", 
+        [
+            "System of a Down", 
+            "Prophets Of Rage", 
+            "Linkin Park", 
+            "Green Day", 
+            "blink-182"
+        ], 
+        "Le Rack'Am", 
+        "Br\u00e9tigny-sur-Orge", 
+        "France"
+    ], 
+    [
+        "blink-182", 
+        "Hurricane Festival 2017", 
+        "2017-06-23T00:00:00", 
+        [
+            "Erik Cohen", 
+            "Editors", 
+            "DIGITALISM live", 
+            "Die Orsons", 
+            "Casper", 
+            "Boys Noize", 
+            "Boy", 
+            "blink-182"
+        ], 
+        "Eichenring Schee\u00dfel", 
+        "27383 Schee\u00dfel", 
+        "Germany"
+    ], 
+    [
+        "blink-182", 
+        "Not So Silent Night", 
+        "2016-12-09T00:00:00", 
+        [
+            "Phantogram", 
+            "Jimmy Eat World", 
+            "Green Day", 
+            "Empire of the Sun", 
+            "Catfish and The Bottlemen", 
+            "blink-182", 
+            "Bastille"
+        ], 
+        "Oracle Arena", 
+        "Oakland", 
+        "United States"
+    ], 
+    [
+        "blink-182", 
+        "Nova Rock 2017", 
+        "2017-06-15T00:00:00", 
+        [
+            "Danko Jones", 
+            "Broilers", 
+            "blink-182", 
+            "Beginner", 
+            "Avatar", 
+            "Architects", 
+            "Airbourne", 
+            "187 Strassenbande"
+        ], 
+        "Pannonia Fields II", 
+        "Nickelsdorf", 
+        "Austria"
+    ], 
+    [
+        "blink-182", 
+        "blink-182", 
+        "2017-06-12T00:00:00", 
+        [
+            "blink-182"
+        ], 
+        "Festhalle", 
+        "Frankfurt", 
+        "Germany"
+    ], 
+    [
+        "blink-182", 
+        "blink-182", 
+        "2017-06-13T00:00:00", 
+        [
+            "blink-182"
+        ], 
+        "K\u00f6nig Pilsener Arena", 
+        "Oberhausen", 
+        "Germany"
+    ], 
+    [
+        "blink-182", 
+        "blink-182", 
+        "2017-06-16T00:00:00", 
+        [
+            "blink-182"
+        ], 
+        "Olympiahalle", 
+        "Munich", 
+        "Germany"
+    ], 
+    [
+        "blink-182", 
+        "blink-182", 
+        "2017-06-21T00:00:00", 
+        [
+            "blink-182"
+        ], 
+        "Tivoli Gr\u00f6na Lund", 
+        "Stockholm", 
+        "Sweden"
+    ], 
+    [
+        "blink-182", 
+        "blink-182", 
+        "2017-06-26T00:00:00", 
+        [
+            "blink-182"
+        ], 
+        "Ahoy", 
+        "Rotterdam", 
+        "Netherlands"
+    ], 
+    [
+        "blink-182", 
+        "blink-182", 
+        "2017-06-29T00:00:00", 
+        [
+            "blink-182"
+        ], 
+        "Max-Schmeling-Halle", 
+        "Berlin", 
+        "Germany"
+    ], 
+    [
+        "blink-182", 
+        "blink-182", 
+        "2017-07-03T00:00:00", 
+        [
+            "blink-182"
+        ], 
+        "Motorpoint Arena", 
+        "Cardiff", 
+        "United Kingdom"
+    ], 
+    [
+        "blink-182", 
+        "blink-182", 
+        "2017-07-04T00:00:00", 
+        [
+            "blink-182"
+        ], 
+        "Capital FM Arena Nottingham", 
+        "Nottingham", 
+        "United Kingdom"
+    ], 
+    [
+        "blink-182", 
+        "blink-182", 
+        "2017-07-05T00:00:00", 
+        [
+            "blink-182"
+        ], 
+        "First Direct Arena", 
+        "Leeds", 
+        "United Kingdom"
+    ], 
+    [
+        "blink-182", 
+        "blink-182", 
+        "2017-07-07T00:00:00", 
+        [
+            "blink-182"
+        ], 
+        "Barclaycard Arena", 
+        "Birmingham", 
+        "United Kingdom"
+    ], 
+    [
+        "blink-182", 
+        "blink-182", 
+        "2017-07-09T00:00:00", 
+        [
+            "blink-182"
+        ], 
+        "Metro Radio Arena Newcastle", 
+        "Newcastle Upon Tyne", 
+        "United Kingdom"
+    ], 
+    [
+        "blink-182", 
+        "blink-182", 
+        "2017-07-11T00:00:00", 
+        [
+            "blink-182"
+        ], 
+        "The SSE Hydro", 
+        "Glasgow", 
+        "United Kingdom"
+    ], 
+    [
+        "blink-182", 
+        "blink-182", 
+        "2017-07-14T00:00:00", 
+        [
+            "blink-182"
+        ], 
+        "Manchester Arena", 
+        "Manchester", 
+        "United Kingdom"
+    ], 
+    [
+        "blink-182", 
+        "blink-182", 
+        "2017-07-15T00:00:00", 
+        [
+            "blink-182"
+        ], 
+        "Echo Arena", 
+        "Liverpool Waterfront", 
+        "United Kingdom"
+    ], 
+    [
+        "blink-182", 
+        "blink-182", 
+        "2017-07-17T00:00:00", 
+        [
+            "blink-182"
+        ], 
+        "BOURNEMOUTH INTERNATIONAL CENTRE", 
+        "Bournemouth", 
+        "United Kingdom"
+    ], 
+    [
+        "blink-182", 
+        "blink-182", 
+        "2017-07-19T00:00:00", 
+        [
+            "blink-182"
+        ], 
+        "O2 Arena", 
+        "London", 
+        "United Kingdom"
+    ], 
+    [
+        "blink-182", 
+        "blink-182", 
+        "2017-07-20T00:00:00", 
+        [
+            "blink-182"
+        ], 
+        "O2 Arena", 
+        "London", 
+        "United Kingdom"
+    ]
+]
