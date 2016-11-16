@@ -168,7 +168,7 @@ def example4():
     DESTPATH = "./example/example4/geo" # gdzie zapisac dane wynikowe
     DJANGO_DB = "D:\Cloud\Dropbox\IT\python\django\eventsMap\eventsMap"
     
-        # instancjonowanie klasy
+    # instancjonowanie klasy
     geokodowanie = geocoder.Geocoder(APIKEY, SRCFILE, DESTPATH, DJANGO_DB)
     geokodowanie.process()
     
@@ -177,3 +177,34 @@ def example4():
     
     # export danych do bazy danych django w celu wyswietlenia wynikow
     geokodowanie.exportToDjango()
+
+
+
+def example5():
+    '''
+    Nie każdy musi mieć konto LastFM lub też bogatą historię przesłuchanych utworow.
+    W zwiazku z czym dodalem mozliwosc wyszukiwania koncertow, bazujac na
+    zdefiniowanej przez uzytkownika liscie wykonawcow.
+    '''
+    # lokalizacja pliku z danymi poczatkowymi
+    srcPath = "./example/example5/zespoly.json"
+    # wskazanie folderu do zapisu danych wynikowych
+    destPath = "./example/example5/wyniki"
+    # rozpoczecie przetwarzania
+    band.zespoly_z_listy(srcPath, destPath)
+    
+    APIKEY = ""
+    SRCFILE = "./example/example5/wyniki/events.json" # dane wyeksportowane z example1
+    DESTPATH = "./example/example5/wyniki" # gdzie zapisac dane wynikowe
+    DJANGO_DB = "D:\Cloud\Dropbox\IT\python\django\eventsMap\eventsMap"
+    
+    # instancjonowanie klasy
+    geokodowanie = geocoder.Geocoder(APIKEY, SRCFILE, DESTPATH, DJANGO_DB)
+    geokodowanie.process()
+    
+    # export odbywa sie zarowno do formatu json jak i geojson
+    geokodowanie.exportToJSON()
+    
+    # export danych do bazy danych django w celu wyswietlenia wynikow
+    geokodowanie.exportToDjango()
+    

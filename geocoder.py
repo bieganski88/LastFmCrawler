@@ -96,6 +96,7 @@ class Geocoder:
         Wejscie dane zrodlowe pochodzace z JSON, wyjscie te same dane wzbogacone
         o wspolrzedne. Pomocniczo korzysta z LookupTable.db
         '''
+        gmAPI = 0 # ile razy zostalo uzyte google maps api - istotne gdyz za darmo tylko 2500 dziennie
         if self._valid is True:
             # nawiazanie polaczenia z baza danych
             conn = sqlite3.connect('LookupTable.db')
@@ -127,6 +128,7 @@ class Geocoder:
                         # insert do bazy danych
                         query = u'INSERT INTO GEOLOKALIZACJE VALUES(NULL, "{}", "{}", {}, {})'.format(country, city, lat, lng)
                         cur.execute(query.encode("UTF-8"))
+                        gmAPI += 1
                     except:
                         try:
                             print "Nie udane przetwarzanie dla >> {},{}".format(city, country)
@@ -145,6 +147,8 @@ class Geocoder:
             conn.close()
         else:
             print "Obiekt nie przeszedl inicjalizacji prawidlowo. Nie mozna kontynuowac."
+        
+        print "Google Maps API zostalo uzyte: {} raz(y).".format(gmAPI)
 
 
     # FUNKCJE POMOCNICZE - TWORZENIE BAZ DANYCH SQLITE

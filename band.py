@@ -7,6 +7,7 @@ Created on Tue Jul 26 07:35:55 2016
 import urllib
 import itertools
 import json
+import os
 from BeautifulSoup import *
 
 
@@ -197,4 +198,41 @@ class BandFm:
         list_lineup = [x.lstrip() for x in artists]
 
         return list_lineup
+
+
+def zespoly_z_listy(srcPath, destPath):
+    '''
+    Kolejno dla kazdego zespolu z listy ZAPISANEJ JAKO JSON wyszukiwane sa informacje
+    o koncertach. Zwracane są pliki JSON z wynikami, ktore pozniej mozna poddac geokodowaniu.
+    Dwa parametry wejsciowe: sciezka do pliku JSON z zespolami
+    oraz sciezka do zapisu danych wynikowych (katalog musi juz istniec).
+    '''
+    # test czy podane lokalizacje w ogole istnieja
+    if not os.path.isfile(srcPath):
+        return u'Brak pliku wejsciowego w zadeklarowanej lokalizacji.'
+    if not os.path.isdir(destPath):
+        return u'Zadeklarowany folder wynikowy nie istnieje. Prosze sprawdzic parametry wejsciowe\
+        i sprobowac ponownie.'
+    # wczytywanie danych
+    try:
+        with open(srcPath) as json_data:
+            bandList = json.load(json_data)[0] # aby pozbyc sie zagniezdzenia
+    except:
+        return u'Nie udalo sie zaladowac danych z pliku json.'
     
+    # iteracja po elementach listy
+    events = []
+    for band in bandList:
+        band = band.replace(' ', '+') # adres url nie lubi spacji
+        artist = BandFm(band, info = 0)
+        artist.get_events()
+        print '{} >>Liczba koncertow: {}'.format(artist._name, len(artist.events))
+        # scalam wyniki
+        for event in artist.events:
+            events.append(event)
+
+    # eksport do json
+    with open('{}/events.json'.format(destPath), 'w') as outfile:
+        json.dump(events, outfile, indent=4)
+    
+    return "Zakonczono przetwarzanie listy."
