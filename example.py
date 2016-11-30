@@ -89,7 +89,7 @@ def example3():
     # "Biegan" - czyli moja - autora tej aplikacji
     user = crawlerMain.LastFmUser('Biegan')
 
-    # wyswietlanie informacji o zawiazanym polaczeniu
+    # wyswietlanie informacji o nawiazanym polaczeniu
     str(user)
 
     # pobieram fragment histori sluchanych utworow, analiza calosci - ponad 1500 stron moze
@@ -119,7 +119,7 @@ def example3():
     print "Pobieranie informacji o wystepach.."
     user.get_concertList(0.2) # analizuje 20% wykonacow w tym wypadku 0.2 *50 = 10
 
-    print "Znalezionych wydarzen muzycznych: {}".format(len(user.concertList))
+    print "Znalezionych wydarzen muzycznych: {}".format(len(user.concert_list))
 
     # export danych do json
     user.to_json('example/example3')
