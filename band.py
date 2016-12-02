@@ -14,7 +14,7 @@ from BeautifulSoup import BeautifulSoup
 
 class BandFm(object):
     '''
-    Pajaczek pobiera informacje o zespole, a dokladniej
+    Pobiera informacje o zespole, a dokladniej
     glowne tagi go opisujace oraz informacje o koncertach (data, miejsce, lineup).
     '''
 

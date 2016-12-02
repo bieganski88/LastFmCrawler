@@ -32,7 +32,7 @@ artist, city, title, country, place, date, lineup.
 * __to_json(folder)__ - zrzuca zawartość atrybutów artists, scrobbles oraz concertList do plików JSON. oOpcjonalny parametr wejściowy to ścieżka do folderu gdzie mają zostać zapisane wyniki. Struktura zapisu jest nastepująca: dla artystów >> [Nazwa zespolu,  adres URL, ilość odtworzeń]; dla utworów >> [Zespól, Nazwa utworu, Data Przesluchania]; dla koncertów >> [Nazwa imprezy, data, lineup imprezy, miejsce, miejscowość, kraj]. Dane zapisywane są dwukrotnie - raz w postaci listy wartości, drugi raz w postaci słownika klucz-wartość.
 * __clean()__ - zeruje wartość atrubytów __artists__, __scrobbles__ oraz __concertList__.
 
-##### Przykład:
+##### Przykład zastosowania klasy LastFmUser:
 ````
 # instancjonowanie klasy LastFmUser
 user = crawlerMain.LastFmUser('Biegan')
@@ -84,27 +84,134 @@ user.to_json('example/example3')
 ##### Klasa BandFm
 Podczas instancjonowania klasa przyjmuje jeden argument wejściowy - nazwę zespołu - o którym ma pobrać informacje.
 ###### Dostępne atrybuty:
-* __tags__ - przechowuje tagi, którymi został opisany zespół
-* __events__ - przechowuje informacje o przyszłych koncertach, jeżeli zespół jest obecnie w trasie koncertowej.
+* __.tags__ - przechowuje najpopularniejsze tagi, którymi został opisany zespół.
+* __.events__ - przechowuje informacje o przyszłych koncertach, jeżeli zespół jest obecnie w trasie koncertowej.
+Pełna informacja zawiera: artyste, miasto, tytuł, kraj, date, miejsce(np. nazwe lokalu) oraz lineup.
 
 ###### Główne metody w klasie:
-* __str__ - zwraca podstawowe informacje o zespole: czy strona odpowiada, czy zespół obecnie jest w trasie koncertowej
-* __get_events__ - pobiera listę nadchodzących koncertów, o ile wykonawca jest w trasie koncertowej
-* __get_tags__ - pobiera najpopularniejsze tagi jakimi został opisany wykonawca
+* __.str()__ - zwraca podstawowe informacje o zespole: czy strona odpowiada, czy zespół obecnie jest w trasie koncertowej
+* __.get_events()__ - wyszukuje listę nadchodzących koncertów dla wybranego artysty, o ile wykonawca jest w trasie koncertowej
+* __.get_tags()__ - pobiera najpopularniejsze tagi jakimi został opisany wykonawca
+* __.to_json(folder)__ - zapisuje dane do pliku JSON, jako parametr startowy przyjmuje sciezke folderu zapisu(sam folder bez nazwy pliku). JSON zapisywany jest w postaci listy wartości.
 
-#### W pliku example.py zawarte zostały przykłady użycia powyższych klas.
+##### Przykład wykorzystania klasy BandFm:
+````
+# parametr wejsciowy - nazwa zespolu
+zespol = 'blink-182'
+
+# instancjonowanie - 'info=1' wypisuje informacje o zespole, m.in. czy jest w trasie koncertowej
+artist = band.BandFm('blink-182', info=1)
+
+# wyszukuje informacje o koncertach
+artist.get_events()
+
+# wyszukuje tagi
+artist.get_tags()
+
+# printuje wyniki w konsoli
+print 'Tagi: {}'.format(artist.tags)
+
+print 'Pierwszy z koncertów:'
+print artist.events[0]
+
+# eksport danych do JSON
+artist.to_json('example/example1')
+
+````
 
 ### ZAWARTOŚĆ MODUŁU 'geocoder' ###
 ##### Klasa Geocoder
-Podczas instancjonowania przyjmuje trzy parametry wejściowe APIKEY - klucz do Google Maps API - wykorzystywana będzie usługa geokodowania,
-SRCFILE - ścieżka do pliku wejściowego z listą koncertów w formacie JSON,  DESTPATH - ścieżka do zapisu plików wynikowych, zawierającego to samo co plik wejściowy plus współrzędne geograficzne.
+Klasa odpowiedzialna za geokodowanie informacji o koncertach. Geokodowanie odbywa sie z dokladnoscia do miasta, wykorzystywany jest Google Maps API. Aby utowrzyć instancję tej klasy niezbędne jest podanie klucza dla usług Google. Wyniki zapisywane sa jako JSON oraz baza SQLite. Każde zgeokodowane miejsce trafia to bazy pomocniczej. W przypadku podania nieprawidłowego klucza dla API, pominięte zostaną jedynie te lokacje, którye nie zostaną odnalezione w bazie pomocniczej.
+Parametry wejściowe:
+* APIKEY - klucz do Google Maps Geocoding API
+* SRCFILE - ścieżka do pliku wejściowego z listą koncertów w formacie JSON
+* DESTPATH - ścieżka do zapisu plików wynikowych,
+* DJANGO_DB - ścieżka do bazy danych sqlite3 skojarzonej z Aaplikacją Django z projektu [DjangoApp4LastFmCrawler](https://github.com/bieganski88/DjangoApp4LastFmCrawler)
+
 ###### Dostępne atrybuty:
-* __data__ - przechowuje zaczytane dane źródłowe
-* __results__ - przechowuje wyniki, czyli informacje o koncertach wraz z georeferencją
+* __.data__ - przechowuje zaczytane dane źródłowe
+* __.results__ - przechowuje wyniki, czyli informacje o koncertach wraz z ich georeferencją.
 
 ###### Główne metody w klasie:
-* __str__ - 
-* __process__ - pobiera geolokalizację dla koncertów, lokalizacja określana jest z dokładnością do miasta. nieznane lokalizacje sprawdza za pomocą Google Maps Geocoding API. raz sprawdzona miejscowość trafia do pomocniczej bazy danych, tak żeby sprawdzać jej już kolejny raz za pomocą API.
-* __exportToJSON__ - eksportuje wyniki do pliku JSON w folderze wynikowym
-* __exportToDB__ - eksportuje wyniki do tabeli w bazie danych SQLite w folderze wynikowym
+* __.str()__ - zwraca ilość danych wejsciowych, aktualna ilosc danych wynikowych oraz sciezke do folderu wynikowego.
+* __.process()__ - główna metoda odpowiedzialna za cały proces geokodowania. raz sprawdzona miejscowość trafia do pomocniczej bazy danych, tak żeby sprawdzać jej już kolejny raz za pomocą API.
+* __.export_to_json__ - eksportuje wyniki do pliku JSON w folderze wynikowym. Dwa pliki wyściowe - regularny JSON z informacjami o współrzędnych, oraz plik w standardzie GeoJSON.
+* __.export_to_db__ - eksportuje wyniki do tabeli w bazie danych SQLite w folderze wynikowym
+* __.export_to_django__ -dane eksportowane są do bazy danych sqlite3 będącej podstawą aplikacji wyświetlającej dane
+(patrz opis atrybutu DJANGO_DB).
 
+##### Przykład wykorzystania klasy Geocoder:
+````
+# definicja parametrów wejściowych
+apikey = "klucz do Google Maps Geocoder API"
+srcfile = "./daneWejsciowe/events.json" # przykladowa sciezka
+destpath = "./daneWynikowe/geo" # gdzie zapisac dane wynikowe // przykladowa sciezka
+django_db = "sciezka do bazy Sqlite3"
+
+# instancjonowanie
+geokodowanie = geocoder.Geocoder(apikey, srcfile, destpath, django_db)
+
+# start procesu przetwarzania
+geokodowanie.process()
+
+# eksport danych
+geokodowanie.export_to_json()
+geokodowanie.export_to_django()
+
+````
+
+##### Fragment pliku EventsGeodata.json
+````
+[
+    [
+        "Citizen", 
+        "Basement", 
+        "2016-12-13T00:00:00", 
+        [
+            "Turnover", 
+            "Citizen"
+        ], 
+        "Royale Boston", 
+        "Boston", 
+        "United States", 
+        42.3600825, 
+        -71.0588801
+    ]
+]
+````
+##### Fragment pliku EventsGeoJSON.json
+````
+{
+    "type": "FeatureCollection", 
+    "features": [
+        {
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [
+                    -71.0588801, 
+                    42.3600825
+                ]
+            }, 
+            "type": "Feature", 
+            "properties": {
+                "city": "Boston", 
+                "title": "Basement", 
+                "country": "United States", 
+                "artist": "Citizen", 
+                "place": "Royale Boston", 
+                "date": "2016-12-13T00:00:00", 
+                "lineup": [
+                    "Turnover", 
+                    "Citizen"
+                ]
+            }
+        }]
+}
+````
+
+#### W pliku ````example.py```` zawarte zostały przykłady użycia powyższych klas.
+Przykłady zostały szczegółowo opisane poprzez komentarze w pliku.
+
+--------------------------------
+##### miłego użytkowania
+### Przemysław Biegański
