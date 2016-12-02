@@ -6,7 +6,7 @@ Created on Fri Sep 16 23:35:10 2016
 """
 # import modulow wlasnych
 import band
-import crawlerMain
+import CrawlerMain
 import geocoder
 
 
@@ -87,7 +87,7 @@ def example3():
     '''
     # instancjonowanie klasy LastFmUser - zawiazanie "polaczenia" z strona uzytkownika
     # "Biegan" - czyli moja - autora tej aplikacji
-    user = crawlerMain.LastFmUser('Biegan')
+    user = CrawlerMain.LastFmUser('Biegan')
 
     # wyswietlanie informacji o nawiazanym polaczeniu
     str(user)
@@ -152,7 +152,7 @@ def example4():
     aktualnych preferencjach uzytkownika. Czyli najpopulatniejszych z ostatnich 30 dni.
     get_artist_recent() - przyjmuje poza tym wartosci: 7, 90, 180 oraz 365.
     '''
-    user = crawlerMain.LastFmUser('Biegan')
+    user = CrawlerMain.LastFmUser('Biegan')
     str(user)
 
     print "Wyszukiwanie najpopularniejszych artystow z ostatnich 30 dni.."
@@ -208,5 +208,3 @@ def example5():
 
     # export danych do bazy danych django w celu wyswietlenia wynikow
     geokodowanie.export_to_django()
-
-example3()

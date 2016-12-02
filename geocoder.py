@@ -100,7 +100,10 @@ class Geocoder(object):
 
             for event in self.data:
                 city, country = event[-2], event[-1]  # city and country
-                print city, country
+                try:
+                    print city, country
+                except:
+                    pass
                 # zapytanie o to czy lokacja jest juz w bazie danych
                 query = u'select * from GEOLOKALIZACJE where city = "{}" and\
                     country = "{}"'.format(city, country)
