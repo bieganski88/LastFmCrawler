@@ -17,7 +17,7 @@ def example1():
     '''
     print "Nazwiazanie polaczenia z strona poswiecona zespolowi"
     # info == 1 jesli chcemy wiecej szczegolow na temat polaczenia
-    artist = band.BandFm('blink-182', info=1)
+    artist = band.BandFm('Sum+41', info=1)
     # pobiera tagi opisujace zespol
     artist.get_tags()
     # pobiera informacje o koncertach
@@ -49,7 +49,7 @@ def example2():
     # zapisywany jest w bazie znane lokalizacje natomiast pobierane sa bezposrednio z bazy
     apikey = ""
 
-    # plik json z danymi wejsiowymi. plik wyeksportowany z klasy band lub LastFmUser
+    # plik json z danymi wejsciowymi. plik wyeksportowany z klasy band lub LastFmUser
     srcfile = "./example/example1/events.json" # dane wyeksportowane z example1
 
     destpath = "./example/example2" # gdzie zapisac dane wynikowe
